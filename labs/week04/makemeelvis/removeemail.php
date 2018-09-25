@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Make Me Elvis - Remove Email</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
   <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
@@ -16,22 +16,22 @@
   $dbc = mysqli_connect('localhost', 'root', '', 'tbrytowski')
     or die('Error connecting to MySQL server.');
 
-  // Delete the customer rows (only if the form has been submitted)
+  // Deletes rows ONLY IF FORM IS SUBMITTED AND PAGE RE-LOADS
   if (isset($_POST['submit'])) {
     foreach ($_POST['todelete'] as $delete_id) {
       $query = "DELETE FROM email_list WHERE id = $delete_id";
       mysqli_query($dbc, $query)
-        or die('Error querying database.');
+        or die('Error deleting email.');
     } 
 
-    echo 'Customer(s) removed.<br />';
+    echo '<h2 id="removedText">Customer removed.</h2>';
   }
 
-  // Display the customer rows with checkboxes for deleting
+  // Shows rows of deleted
   $query = "SELECT * FROM email_list";
   $result = mysqli_query($dbc, $query);
   while ($row = mysqli_fetch_array($result)) {
-    echo '<input type="checkbox" value="' . $row['id'] . '" name="todelete[]" />';
+    echo '<input type="checkbox" class="checkedInput" value="' . $row['id'] . '" name="todelete[]" />';
     echo $row['first_name'];
     echo ' ' . $row['last_name'];
     echo ' ' . $row['email'];

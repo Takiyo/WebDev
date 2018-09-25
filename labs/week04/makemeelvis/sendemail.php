@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Make Me Elvis - Send Email</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
   <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
@@ -63,9 +63,9 @@
 ?>
 
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <label for="subject">Subject of email:</label><br />
+    <label for="subject"><h3>Subject:</h3></label>
     <input id="subject" name="subject" type="text" value="<?php echo $subject; ?>" size="30" /><br />
-    <label for="elvismail">Body of email:</label><br />
+    <label for="elvismail"><h3>Body:</h3></label>
     <textarea id="elvismail" name="elvismail" rows="8" cols="40"><?php echo $text; ?></textarea><br />
     <input type="submit" name="submit" value="Submit" />
   </form>

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Make Me Elvis - Add Email</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
 </head>
 <body>
   <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
@@ -43,16 +43,17 @@
 
   if ($output_form == 'yes') {
 ?>
-
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <label for="firstname">First name:</label>
-    <input type="text" id="firstname" name="firstname" /><br />
-    <label for="lastname">Last name:</label>
-    <input type="text" id="lastname" name="lastname" /><br />
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" /><br />
-    <input type="submit" name="submit" value="Submit" />
-  </form>
+    <div class="container">
+      <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <label for="firstname">First name:</label><br>
+            <input type="text" id="firstname" name="firstname" /><br />
+            <label for="lastname">Last name:</label><br>
+            <input type="text" id="lastname" name="lastname" /><br />
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" /><br />
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+    </div>
 
 <?php
   }
