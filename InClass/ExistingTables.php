@@ -4,10 +4,14 @@
 </head>
 
 
-<h2>DBFZ Character Opinions</h2>
+<h2>DBFZ Existing Tables</h2>
 
 
 <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+
+
+
+
 
     <?php
     $dbc = mysqli_connect('localhost', 'root', '', 'tbrytowski');
