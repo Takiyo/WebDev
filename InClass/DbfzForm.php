@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>DBFZ Form</title>
+    <?php include 'upload.php'; ?>
 </head>
 
 
@@ -11,6 +12,7 @@
         $topPlayersUse = $_POST['topPlayersUse'];
         $datePlayerStarted = $_POST['datePlayerStarted'];
         $coolnessRating = $_POST['coolnessRating'];
+        $image = $_FILES['gamerMug']['name'];
         $output_form = 'no';
 
         if (empty($playerName) || empty($characterName) || empty($datePlayerStarted)
@@ -42,7 +44,11 @@
                 "Character name: " . $characterName . "</br>" .
                 "Top player usage: " . $topPlayersUse . "</br>" .
                 "Date you started: " . $datePlayerStarted . "</br>" .
-                "Coolness Rating: " . $coolnessRating . "</br>";
+                "Coolness Rating: " . $coolnessRating . "</br></br>";
+
+            // Attempting to upload file.
+            uploadImage();
+            echo "<img src='" . "uploads/" . "$image" . "'/>";
         }
 
         mysqli_close($dbc);
@@ -51,7 +57,7 @@
 if ($output_form == 'yes') {
     ?>
     <h2>DBFZ Character Opinion Survey</h2>
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
 
         <!--<legend>Roster ID</legend>
         <input type="text" id="rosterId" name="rosterId" /><br /><br /> -->
@@ -77,7 +83,11 @@ if ($output_form == 'yes') {
         <legend>How cool is this character to you from 1-100?</legend>
         <input type="range" name="coolnessRating" id="coolnessRating" value="50" min="1" max="100"
                oninput="coolnessRatingOutput.value = coolnessRating.value">
-        <output name="coolnessRatingOutput" id="coolnessRatingOutput">50</output>
+        <output name="coolnessRatingOutput" id="coolnessRatingOutput">50</output><br><br>
+
+        <label for="gamerMug">Give us a face to go with the bad opinion.</label><br>
+        <input type="file" id="gamerMug" name="gamerMug"/>
+        <input type="hidden" name="MAX_FILE_SIZE" value="32768" />
         </br></br>
 
         <input type="submit" value="Submit Survey" name="submit"/>
