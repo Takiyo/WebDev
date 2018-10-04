@@ -9,6 +9,7 @@ let maxD;
 
 let xlightcounter = 0;
 let ylightcounter = 0;
+let incrementer = 0;
 
 function setup(){
   createCanvas(400, 400, WEBGL);
@@ -21,7 +22,12 @@ function draw(){
   ortho(-300, 300, 300, -300, -500, 700);
 
   directionalLight(100, 0, 255, 2, -1, 0);
-  directionalLight(255, 255, 0, map(mouseX, 0, width, 0, 5), -1, 0);
+  directionalLight(255, 255, 0, incrementer, -1, 0);
+
+  incrementer += 0.1;
+  if (incrementer >= 5){
+    incrementer = 0;
+  }
 
 
 
