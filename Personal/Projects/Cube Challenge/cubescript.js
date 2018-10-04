@@ -21,8 +21,8 @@ function draw(){
   background(20);
   ortho(-300, 300, 300, -300, -500, 700);
 
-  directionalLight(100, 0, 255, 2, -1, 0);
-  directionalLight(255, 255, 0, incrementer, -1, 0);
+  /* directionalLight(100, 0, 255, 2, -1, 0);
+  directionalLight(255, 255, 0, incrementer, -1, 0); */
 
   incrementer += 0.1;
   if (incrementer >= 5){
@@ -46,7 +46,7 @@ for (let z = 0; z < height; z += w){
     let a = angle + offset;
     let h = map(sin(a), -1, 1, 0, 200);
     translate(x - width / 2, 0, z - height / 2);
-    ambientMaterial(255, 255, 255);
+    normalMaterial(255, 255, 255);
     box(w-2, h, w); // width, height, depth
     //rect((x - width / 2) + (w / 2), 0, w - 2.5, h); // (x, y, width, height);
     pop();
