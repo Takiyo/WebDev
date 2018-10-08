@@ -15,7 +15,7 @@
 
   <!-- Side navigation -->
   <div class="sidenav">
-    <a href="#">Top Scores</a>
+    <a href="index.php">Top Scores</a>
     <a href="admin.php">Admin</a>
   </div>
 
