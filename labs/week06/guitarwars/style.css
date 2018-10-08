@@ -23,6 +23,11 @@ body{
 #fireheader{
 }
 
+
+#unverified{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
 #textoverimage{
   position: absolute;
   top: 40%;

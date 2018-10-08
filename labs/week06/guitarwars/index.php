@@ -15,10 +15,8 @@
 
   <!-- Side navigation -->
   <div class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="#">Top Scores</a>
+    <a href="admin.php">Admin</a>
   </div>
 
 <div class="imagecontainer">
@@ -53,7 +51,7 @@ Top Score: ' . $row['score'] . '</div></div></td></tr>';
       echo '<td><img src="' . GW_UPLOADPATH . $row['screenshot'] . '" alt="Score image" /></td></tr>';
     }
     else {
-      echo '<td><img src="' . GW_UPLOADPATH . 'unverified.gif' . '" alt="Unverified score" /></td></tr>';
+      echo '<td id="unverified"><img src="' . GW_UPLOADPATH . 'unverified.gif' . '" alt="Unverified score" /></td></tr>';
     }
     $i++;
   }

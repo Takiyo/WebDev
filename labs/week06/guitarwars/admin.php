@@ -11,25 +11,34 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+  <div class="main">
+
   <h2>Guitar Wars - High Scores Administration</h2>
   <p>Below is a list of all Guitar Wars high scores. Use this page to remove scores as needed.</p>
   <hr />
+
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <a href="index.php">Top Scores</a>
+    <a href="admin.php">Admin</a>
+  </div>
+
 
 <?php
   require_once('appvars.php');
   require_once('connectvars.php');
 
-  // Connect to the database 
+  // Connect to the database
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Retrieve the score data from MySQL
   $query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
   $data = mysqli_query($dbc, $query);
 
-  // Loop through the array of score data, formatting it as HTML 
+  // Loop through the array of score data, formatting it as HTML
   echo '<table>';
   echo '<tr><th>Name</th><th>Date</th><th>Score</th><th>Action</th></tr>';
-  while ($row = mysqli_fetch_array($data)) { 
+  while ($row = mysqli_fetch_array($data)) {
     // Display the score data
     echo '<tr class="scorerow"><td><strong>' . $row['name'] . '</strong></td>';
     echo '<td>' . $row['date'] . '</td>';
@@ -48,6 +57,6 @@
 
   mysqli_close($dbc);
 ?>
-
-</body> 
+</div>
+</body>
 </html>
