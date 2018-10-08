@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecf0db64-1b2a-4c2b-9bb4-20fbc97317d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/week05/guitarwars/connectvars.php" beforeDir="false" afterPath="$PROJECT_DIR$/labs/week05/guitarwars/connectvars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/week06/guitarwars/connectvars.php" beforeDir="false" afterPath="$PROJECT_DIR$/labs/week06/guitarwars/connectvars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labs/week06/guitarwars/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/labs/week06/guitarwars/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="ecf0db64-1b2a-4c2b-9bb4-20fbc97317d6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +12,7 @@
     <session id="1891764058">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="2" />
@@ -60,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/labs/week06/guitarwars/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -79,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/labs/week06/guitarwars/connectvars.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-end-line="7" />
+              <caret line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -88,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/labs/week05/guitarwars/connectvars.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -236,16 +231,15 @@
       <workItem from="1538765422479" duration="9775000" />
       <workItem from="1538882765290" duration="6364000" />
       <workItem from="1538938439812" duration="605000" />
-      <workItem from="1539024601284" duration="1952000" />
+      <workItem from="1539024601284" duration="2551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18696000" />
+    <option name="totallyTimeSpent" value="19295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="992" y="0" width="935" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25942856" />
@@ -421,7 +415,7 @@
     <entry file="file://$PROJECT_DIR$/labs/week06/guitarwars/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="87" column="19" lean-forward="true" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -434,14 +428,14 @@
     <entry file="file://$PROJECT_DIR$/labs/week06/guitarwars/connectvars.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-end-line="7" />
+          <caret line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labs/week05/guitarwars/connectvars.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
