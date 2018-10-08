@@ -39,6 +39,7 @@ body{
 
 .topscoretable{
   width: 70%;
+    max-width:630px;
   float:left;
   position:absolute;
 }
