@@ -59,6 +59,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
                     <?php
+                    require_once('connectvars.php');
 
 
 
@@ -87,10 +88,10 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                     // Test Connection Credentials
                     if (!empty($noun) || !empty($verb) || !empty($adjective) || !empty($adverb)) {
-                        $host = '127.0.0.1';
-                        $db   = 'tbrytowski';
-                        $user = 'root';
-                        $pass = '';
+                        $host = DB_HOST;
+                        $db   = DB_NAME;
+                        $user = DB_USER;
+                        $pass = DB_PASSWORD;
                         $charset = 'utf8mb4';
 
                         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
