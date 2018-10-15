@@ -19,9 +19,10 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
 </head>
-<body class="container">
-    <div class="row">
-    <div class="col-sm-6 offset-sm-4 rounded border">
+<body >
+  <div class="container-fluid mainbody">
+    <div class="row mainrow">
+    <div class="col-sm-6 offset-sm-3 border rounded bg-danger">
   <h3>Mismatch - Where opposites attract!</h3>
 
 <?php
@@ -39,19 +40,20 @@
     echo '&#10084; <a href="signup.php">Sign Up</a>';
   }
 
-  // Connect to the database 
-  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
+  // Connect to the database
+  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Retrieve the user data from MySQL
   $query = "SELECT user_id, first_name, picture FROM mismatch_user WHERE first_name IS NOT NULL ORDER BY join_date DESC LIMIT 5";
   $data = mysqli_query($dbc, $query);
 
   // Loop through the array of user data, formatting it as HTML
+  echo '<div class="col-sm-6 offset-sm-3">';
   echo '<h4>Latest members:</h4>';
-  echo '<table>';
+  echo '<table class="center">';
   while ($row = mysqli_fetch_array($data)) {
     if (is_file(MM_UPLOADPATH . $row['picture']) && filesize(MM_UPLOADPATH . $row['picture']) > 0) {
-      echo '<tr><td><img src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" /></td>';
+      echo '<div class="item col-xs-6 col-lg-12"><tr><td><img class="" src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" /></td>';
     }
     else {
       echo '<tr><td><img src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['first_name'] . '" /></td>';
@@ -60,14 +62,16 @@
       echo '<td><a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a></td></tr>';
     }
     else {
-      echo '<td>' . $row['first_name'] . '</td></tr>';
+      echo '</tr><tr><td class="names">' . $row['first_name'] . '</td></tr></div>';
     }
   }
   echo '</table>';
 
   mysqli_close($dbc);
 ?>
+</div>
     </div>
     </div>
-</body> 
+  </div>
+</body>
 </html>

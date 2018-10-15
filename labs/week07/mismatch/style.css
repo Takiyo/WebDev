@@ -18,3 +18,18 @@ td.label {
 img.profile {
   vertical-align: top;
 }
+
+.mainrow td{
+  padding-bottom: 50px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.names{
+ color: #69ffb4;
+ font-size: 1.5em;
+}
+.center *{
+  display: block;
+  margin-left: 50%;
+  margin-right: 50%;
+}
