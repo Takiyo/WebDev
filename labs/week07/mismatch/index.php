@@ -48,27 +48,26 @@
   $data = mysqli_query($dbc, $query);
 
   // Loop through the array of user data, formatting it as HTML
-  echo '<div class="col-sm-6 offset-sm-3">';
+  echo '<div class="col-sm-6 offset-sm-3 center">';
   echo '<h4>Latest members:</h4>';
-  echo '<table class="center">';
   while ($row = mysqli_fetch_array($data)) {
     if (is_file(MM_UPLOADPATH . $row['picture']) && filesize(MM_UPLOADPATH . $row['picture']) > 0) {
-      echo '<div class="item col-xs-6 col-lg-12"><tr><td><img class="" src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" /></td>';
+      echo '<img class="" src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" />';
     }
     else {
-      echo '<tr><td><img src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['first_name'] . '" /></td>';
+      echo '<img src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['first_name'] . '" />';
     }
     if (isset($_SESSION['user_id'])) {
-      echo '<td><a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a></td></tr>';
+      echo '<a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a>';
     }
     else {
-      echo '</tr><tr><td class="names">' . $row['first_name'] . '</td></tr></div>';
+      echo $row['first_name'];
     }
   }
-  echo '</table>';
 
   mysqli_close($dbc);
 ?>
+</div>
 </div>
     </div>
     </div>
