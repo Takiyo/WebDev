@@ -4,12 +4,23 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Mismatch - Sign Up</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
+    <script src="validation.js"></script>
 </head>
 <body>
-  <h3>Mismatch - Sign Up</h3>
+<div class="container-fluid mainbody">
+
+    <div class="row mainrow">
+
+        <div class="col-sm-6 offset-sm-3 rounded bg-danger">
+
+
+            <h3 class="text-center pageheader">Mismatch - Sign Up</h3>
 
 <?php
+echo '<div class="col-sm-6 offset-sm-3 center">';
+
   require_once('appvars.php');
   require_once('connectvars.php');
 
@@ -49,20 +60,29 @@
   }
 
   mysqli_close($dbc);
+
+
+//username, first_name, last_name, gender, birthdate, city, state, picture
+
 ?>
 
   <p>Please enter your username and desired password to sign up to Mismatch.</p>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <fieldset>
-      <legend>Registration Info</legend>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" value="<?php if (!empty($username)) echo $username; ?>" /><br />
+      <legend>Tell us a little about yourself!</legend>
+        <label for="username">Username:</label>
+      <input type="text" id="username" name="username" value="<?php if (!empty($username)) echo $username; ?>"
+             onblur="requiredField(this)" required/><br />
+
       <label for="password1">Password:</label>
-      <input type="password" id="password1" name="password1" /><br />
+      <input type="password" id="password1" name="password1" onblur="requiredField(this)" required/><br />
       <label for="password2">Password (retype):</label>
-      <input type="password" id="password2" name="password2" /><br />
+      <input type="password" id="password2" name="password2" onblur="requiredField(this)" required/><br />
     </fieldset>
     <input type="submit" value="Sign Up" name="submit" />
   </form>
+        </div>
+    </div>
+</div>
 </body> 
 </html>

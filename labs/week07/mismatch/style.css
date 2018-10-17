@@ -1,3 +1,5 @@
+*{  font-family: Calibri;}
+
 .error {
   font-weight: bold;
   color: #FF0000;
@@ -7,17 +9,16 @@
   font-style: italic;
 }
 
-form label {  display: inline-block;  width: 150px;
+form label {
+  display: inline-block;
+  width: 150px;
   font-weight: bold;
 }
 
 td.label {
   font-weight: bold;
-
-
-img.profile {
-  vertical-align: top;
 }
+
 
 .mainrow td{
   padding-bottom: 50px;
@@ -27,4 +28,68 @@ img.profile {
 .names{
  color: #69ffb4;
  font-size: 1.5em;
+}
+
+.caption{
+
+
+}
+
+.imagecontainer{
+  min-width: initial;
+  margin: 1em;
+  border: 3em solid  #cd9cff;
+  border-radius: 5px;
+  border-style: inset;
+}
+.image{
+  display: block;
+  margin: 0 auto;
+  min-height: 15em;
+}
+
+.topnav a{
+  color:#ceff9c;
+}
+.topnav a:hover{
+  color: #cd9cff;
+}
+
+.headerseparator{
+  border-color: #9cffcd;
+  border-style: dotted;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.pageheader{
+  padding-bottom:1em;
+  color:#9cffcd;
+
+}
+
+.mainbody{
+  background-image: url(romanticbg.jpg);
+}
+
+.mainbody::after{
+  content: "";
+  background-image: url(romanticbg.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.caption{
+  position:absolute;
+  left:50%;
+  right:50%;
+  font-size: 1.5em;
+
 }

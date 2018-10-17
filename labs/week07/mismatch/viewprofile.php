@@ -16,12 +16,22 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Mismatch - View Profile</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
 </head>
 <body>
-  <h3>Mismatch - View Profile</h3>
+<div class="container-fluid mainbody">
+
+    <div class="row mainrow">
+
+        <div class="col-sm-6 offset-sm-3 rounded bg-danger">
+
+
+            <h3 class="text-center pageheader">Mismatch - View profile</h3>
 
 <?php
+echo '<div class="col-sm-6 offset-sm-3 center">';
+
   require_once('appvars.php');
   require_once('connectvars.php');
 
@@ -101,5 +111,6 @@
 
   mysqli_close($dbc);
 ?>
+        </div></div></div>
 </body> 
 </html>

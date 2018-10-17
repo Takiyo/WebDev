@@ -15,17 +15,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Mismatch - Edit Profile</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
 </head>
 <body>
-  <h3>Mismatch - Edit Profile</h3>
+<div class="container-fluid mainbody">
+
+    <div class="row mainrow">
+
+        <div class="col-sm-6 offset-sm-3 rounded bg-danger">
+
+
+            <h3 class="text-center pageheader">Mismatch - Edit Profile</h3>
 
 <?php
   require_once('appvars.php');
   require_once('connectvars.php');
+echo '<div class="col-sm-6 offset-sm-3 center">';
 
-  // Make sure the user is logged in before going any further.
+
+// Make sure the user is logged in before going any further.
   if (!isset($_SESSION['user_id'])) {
     echo '<p class="login">Please <a href="login.php">log in</a> to access this page.</p>';
     exit();
@@ -56,7 +65,8 @@
     if (!empty($new_picture)) {
       if ((($new_picture_type == 'image/gif') || ($new_picture_type == 'image/jpeg') || ($new_picture_type == 'image/pjpeg') ||
         ($new_picture_type == 'image/png')) && ($new_picture_size > 0) && ($new_picture_size <= MM_MAXFILESIZE) &&
-        ($new_picture_width <= MM_MAXIMGWIDTH) && ($new_picture_height <= MM_MAXIMGHEIGHT)) {        if ($_FILES['file']['error'] == 0) {          // Move the file to the target upload folder
+        ($new_picture_width <= MM_MAXIMGWIDTH) && ($new_picture_height <= MM_MAXIMGHEIGHT)) {
+
           $target = MM_UPLOADPATH . basename($new_picture);
           if (move_uploaded_file($_FILES['new_picture']['tmp_name'], $target)) {
             // The new picture file move was successful, now make sure any old picture is deleted
@@ -70,11 +80,15 @@
             $error = true;
             echo '<p class="error">Sorry, there was a problem uploading your picture.</p>';
           }
-        }      }      else {
+
+      }
+      else {
         // The new picture file is not valid, so delete the temporary file and set the error flag
         @unlink($_FILES['new_picture']['tmp_name']);
-        $error = true;        echo '<p class="error">Your picture must be a GIF, JPEG, or PNG image file no greater than ' . (MM_MAXFILESIZE / 1024) .
-          ' KB and ' . MM_MAXIMGWIDTH . 'x' . MM_MAXIMGHEIGHT . ' pixels in size.</p>';      }
+        $error = true;
+        echo '<p class="error">Your picture must be a GIF, JPEG, or PNG image file no greater than ' . (MM_MAXFILESIZE / 1024) .
+          ' KB and ' . MM_MAXIMGWIDTH . 'x' . MM_MAXIMGHEIGHT . ' pixels in size.</p>';
+      }
     }
 
     // Update the profile data in the database
@@ -139,7 +153,7 @@
         <option value="F" <?php if (!empty($gender) && $gender == 'F') echo 'selected = "selected"'; ?>>Female</option>
       </select><br />
       <label for="birthdate">Birthdate:</label>
-      <input type="text" id="birthdate" name="birthdate" value="<?php if (!empty($birthdate)) echo $birthdate; else echo 'YYYY-MM-DD'; ?>" /><br />
+      <input type="date" id="birthdate" name="birthdate" value="" /><br />
       <label for="city">City:</label>
       <input type="text" id="city" name="city" value="<?php if (!empty($city)) echo $city; ?>" /><br />
       <label for="state">State:</label>
@@ -153,5 +167,6 @@
     </fieldset>
     <input type="submit" value="Save Profile" name="submit" />
   </form>
+        </div></div></div></div>
 </body> 
 </html>

@@ -22,23 +22,30 @@
 <body >
   <div class="container-fluid mainbody">
     <div class="row mainrow">
-    <div class="col-sm-6 offset-sm-3 border rounded bg-danger">
-  <h3>Mismatch - Where opposites attract!</h3>
+
+    <div class="col-sm-6 offset-sm-3 rounded bg-danger">
+  <h1 class="text-center pageheader">Mismatch - Where opposites attract!</h1>
 
 <?php
   require_once('appvars.php');
   require_once('connectvars.php');
 
   // Generate the navigation menu
+
   if (isset($_SESSION['username'])) {
     echo '&#10084; <a href="viewprofile.php">View Profile</a><br />';
     echo '&#10084; <a href="editprofile.php">Edit Profile</a><br />';
     echo '&#10084; <a href="logout.php">Log Out (' . $_SESSION['username'] . ')</a>';
   }
   else {
-    echo '&#10084; <a href="login.php">Log In</a><br />';
-    echo '&#10084; <a href="signup.php">Sign Up</a>';
+    echo '<div class="text-center topnav">&#10084;<a href="login.php">Log In</a>';
+    echo '&#10084;<a href="signup.php">Sign Up</a>&#10084;</div>';
   }
+?>
+        <hr class="headerseparator">
+        <?php
+
+
 
   // Connect to the database
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -49,19 +56,19 @@
 
   // Loop through the array of user data, formatting it as HTML
   echo '<div class="col-sm-6 offset-sm-3 center">';
-  echo '<h4>Latest members:</h4>';
+  echo '<h3 class="col-sm-12 text-center">Latest members:</h3>';
   while ($row = mysqli_fetch_array($data)) {
     if (is_file(MM_UPLOADPATH . $row['picture']) && filesize(MM_UPLOADPATH . $row['picture']) > 0) {
-      echo '<img class="" src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" />';
+      echo '<div class="imagecontainer"><img class="image" src="' . MM_UPLOADPATH . $row['picture'] . '" alt="' . $row['first_name'] . '" />';
     }
     else {
       echo '<img src="' . MM_UPLOADPATH . 'nopic.jpg' . '" alt="' . $row['first_name'] . '" />';
     }
     if (isset($_SESSION['user_id'])) {
-      echo '<a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a>';
+      echo '<div class="text-center caption"><a href="viewprofile.php?user_id=' . $row['user_id'] . '">' . $row['first_name'] . '</a></div>';
     }
     else {
-      echo $row['first_name'];
+      echo '<div class="text-center caption">' . $row['first_name'] . '</div></div>';
     }
   }
 

@@ -52,11 +52,21 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Mismatch - Log In</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
 </head>
 <body>
-  <h3>Mismatch - Log In</h3>
+<div class="container-fluid mainbody">
+
+    <div class="row mainrow">
+
+        <div class="col-sm-6 offset-sm-3 rounded bg-danger">
+
+
+        <h3 class="text-center pageheader">Mismatch - Log In</h3>
 
 <?php
+echo '<div class="col-sm-6 offset-sm-3 center">';
+
   // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
   if (empty($_SESSION['user_id'])) {
     echo '<p class="error">' . $error_msg . '</p>';
@@ -65,10 +75,11 @@
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <fieldset>
       <legend>Log In</legend>
-      <label for="username">Username:</label>
+        <label for="username">Username:</label>
       <input type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
       <label for="password">Password:</label>
       <input type="password" name="password" />
+
     </fieldset>
     <input type="submit" value="Log In" name="submit" />
   </form>
@@ -80,6 +91,9 @@
     echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
   }
 ?>
-
+        </div></div>
+</div>
+    </div>
+</div>
 </body>
 </html>
