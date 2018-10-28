@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Brent Presley"/>
+    <meta name="description" content="No description yet"/>
+    <meta name="keywords" content="list,your,keywords"/>
+	
+    <title>JavaScript Functions Examples Unit 4</title>
+		
+	<!-- JavaScript Functions -->
+    <script type="text/javascript" src="javascript/JSTools/DateFormat.js"></script>
+    <script type="text/javascript" src="javascript/JSTools/toTitleCase.js"></script>
+    <script type="text/javascript" src="javascript/functions.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+	//this is how we have used javascript in the past	
+	const DISCOUNT_LIMIT = 49.95;
+    const DISCOUNT = 0.05;
+    var totalPrice;
+    var subTotalPrice = 54.99;   // pretend this value was entered via prompt
+     
+    if (subTotalPrice < DISCOUNT_LIMIT) {
+        totalPrice = subTotalPrice;
+        document.write("Total: " + totalPrice);
+    } else {
+        totalPrice = subTotalPrice - (subTotalPrice * DISCOUNT);
+        document.write("Total with discount: " + totalPrice);
+    }
+
+//this is how we will use javascript going forward.  In a function.
+//after this example, we will store javascript in a folder rather than in the html.
+function introToFunctions() {  // <-- This line before...
+    "use strict";
+    const DISCOUNT_LIMIT = 49.95;
+    const DISCOUNT = 0.05;
+    var totalPrice;
+    var subTotalPrice = 54.99;    // pretend this value was entered via prompt
+     
+    if (subTotalPrice < DISCOUNT_LIMIT) {
+        totalPrice = subTotalPrice;
+        document.write("Total: " + totalPrice);
+    } else {
+        totalPrice = subTotalPrice - (subTotalPrice * DISCOUNT);
+        document.write("Total with discount: " + totalPrice);
+    }
+}  // <-- This line after!
+
+//************************using constants*******************************************
+// Constants with multi-word names
+     
+    // Declare Constants
+    const SALES_TAX = 0.5;
+    const ONE_THOUSAND = 1000;
+    const BYE_MESSAGE = "Good bye, have a nice day";
+
+// Declaring constants and variables.  Always declare constants first
+     // Declare Constants
+    const PI = 3.14159265358979323846264;
+    const ONE_MILLION = 1000000;
+     
+    // Declare Variables
+    var firstName;
+    var enteredNumber;
+    var outputElement;
+//**********************************************************************************
+
+
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

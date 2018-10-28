@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/displayfunctions.js"></script>
 <style>
     body, html {
         height: 100%;
@@ -27,13 +28,13 @@
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
         <div class="w3-col s4">
-            <a href="#" class="w3-button w3-block w3-black">HOME</a>
+            <a href="index.php" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s4">
-            <a href="#about" class="w3-button w3-block w3-black">SIGN UP</a>
+            <a href="#signup" class="w3-button w3-block w3-black">SIGN UP</a>
         </div>
         <div class="w3-col s4">
-            <a href="#menu" class="w3-button w3-block w3-black">LOG IN</a>
+            <a href="#login" class="w3-button w3-block w3-black">LOG IN</a>
         </div>
     </div>
 </div>
@@ -58,6 +59,7 @@
 
             <?php
             require_once('connectvars.php');
+            require_once('appvars.php');
 
 
 
@@ -73,10 +75,17 @@
                 $duration= $_POST['duration'];
                 $heartrate = $_POST['heartrate'];
 
-                //
-                $calculatedOutputMale = ((-55.0969 + (0.6309 * $heartrate) + (0.090174 * $weight) + (0.2017 * $age)) / 4.184) * $duration;
 
-                $calculatedOutputFemale = ((-20.4022 + (0.4472 * $heartrate) - (0.057288 * $weight) + (0.074 * $age)) / 4.184) * $duration;
+                //testing
+              //  if (empty($gender)){
+                //    $gender = "Female";
+               // }
+
+
+
+                $calculatedOutputMale = ((-55.0969 + (0.6309 * (int)$heartrate) + (0.090174 * (int)$weight) + (0.2017 * (int)$age)) / 4.184) * (int)$duration;
+
+                $calculatedOutputFemale = ((-20.4022 + (0.4472 * (int)$heartrate) - (0.057288 * (int)$weight) + (0.074 * (int)$age)) / 4.184) * (int)$duration;
 
 
 
@@ -124,11 +133,10 @@
                 $stmt->execute([$age, $weight, $duration, $heartrate]);
 
                 // Get & display data back from database
-                $stmt = $pdo->query('SELECT * FROM madlibstable');
+                $stmt = $pdo->query('SELECT * FROM exercise_log');
                 $stmt->execute();
 
-                $story_exists = true;
-                echo "<h3>Existing Stories:</h3>";
+
 
                 foreach($stmt as $row)
                 {
@@ -141,35 +149,30 @@
 
 
 
-            if ($story_exists) {
-                echo "<h4 id='focushere'>Input another!</h4>";
-            }
+
             if (true){
                 ?>
-                <form action="<?php echo $_SERVER['PHP_SELF'] . $focusOrNot ?>" method="post" enctype="multipart/form-data">
+                <form action="index.php<?php echo "#focushere"?>" method="post" enctype="multipart/form-data">
                     <legend>Enter your Gender:</legend>
-                    <input type="text" name="gender" list="genderList">
+                    <input class="w3-input w3-padding-8 w3-border" type="text" name="gender" list="genderList">
                     <datalist id="genderList">
                         <option value="Male">
                         <option value="Female">
                     </datalist></br><br>
 
                     <legend>Enter your age:</legend>
-                    <input type="text" name="age"/><br><br>
+                    <input class="w3-input w3-padding-8 w3-border" type="text" name="age"/><br><br>
 
                     <legend>Enter your weight (pounds):</legend>
-                    <input type="text" name="weight"/><br><br>
+                    <input class="w3-input w3-padding-8 w3-border" type="text" name="weight"/><br><br>
 
                     <legend>How long you exercised (minutes):</legend>
-                    <input type="text" name="duration"/><br><br>
+                    <input class="w3-input w3-padding-8 w3-border" type="text" name="duration"/><br><br>
 
                     <legend>What was your average heart rate (BPM):</legend>
-                    <input type="text" name="heartrate"/><br><br>
+                    <input class="w3-input w3-padding-8 w3-border" type="text" name="heartrate"/><br><br>
 
-
-
-
-                    <input type="submit" value="Calculate" name="submit" style="margin-bottom:50px"/>
+                    <input class="w3-button w3-black w3-input" type="submit" value="Calculate" name="submit" style="margin-bottom:50px"/>
 
                 </form>
                 <?php
@@ -181,58 +184,78 @@
     </div>
 
     <!-- Menu Container -->
-    <div class="w3-container" id="menu">
-        <div class="w3-content" style="max-width:700px">
+<?php
+    if (isset($_POST['submit'])) {
+        ?>
+        <div class="w3-container" id = "menu" >
+        <div class="w3-content" style = "max-width:700px" >
 
-            <h5 class="w3-center w3-padding-48"><span id="focushere" class="w3-tag w3-wide">YOUR BURNED CALORIES</span></h5>
+            <h5 class="w3-center w3-padding-48" ><span id = "focushere" class="w3-tag w3-wide" > YOUR BURNED CALORIES </span ></h5 >
 
-            <div class="w3-row w3-center w3-card w3-padding">
-                <a href="javascript:void(0)" onclick="openResults(event, 'Walking');" id="myLink">
-                    <div class="w3-col s6 tablink">Walking</div>
-                </a>
-                <a href="javascript:void(0)" onclick="openResults(event, 'Running');">
-                    <div class="w3-col s6 tablink">Running</div>
-                </a>
-                <a href="javascript:void(0)" onclick="openResults(event, 'Weightlifting');">
-                    <div class="w3-col s6 tablink">Weightlifting</div>
-                </a>
-                <a href="javascript:void(0)" onclick="openResults(event, 'Swimming');">
-                    <div class="w3-col s6 tablink">Swimming</div>
-                </a>
+            <div class="w3-row w3-center w3-card w3-padding" >
+                <a href = "javascript:void(0)" onclick = "openResults(event, 'Walking');" id = "myLink" >
+                    <div class="w3-col s6 tablink" > Walking</div >
+                </a >
+                <a href = "javascript:void(0)" onclick = "openResults(event, 'Running');" >
+                    <div class="w3-col s6 tablink" > Running</div >
+                </a >
+                <a href = "javascript:void(0)" onclick = "openResults(event, 'Weightlifting');" >
+                    <div class="w3-col s6 tablink" > Weightlifting</div >
+                </a >
+                <a href = "javascript:void(0)" onclick = "openResults(event, 'Swimming');" >
+                    <div class="w3-col s6 tablink" > Swimming</div >
+                </a >
             </div>
+            <?php
+            }
+            ?>
 
             <div id="Walking" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Bread Basket</h5>
-                <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-                <?php
+                <h5>While walking, you burned:</h5>
+                <strong><p class="w3-text-grey" style="font-size:120%; text-align: center;"><?php
                     if ($gender == "Male"){
-                        echo $calculatedOutputMale;
+                        echo round($calculatedOutputMale * WALK_MODIFIER);
                     }
-                ?>
+                    else if($gender == "Female"){
+                        echo round($calculatedOutputFemale * WALK_MODIFIER);
+                    }
+                    ?> calories</strong></p>
             </div>
 
             <div id="Running" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Coffee</h5>
-                <p class="w3-text-grey">Regular coffee 2.50</p><br>
-
-
-
+                <h5>While running, you burned:</h5>
+                <strong><p class="w3-text-grey" style="font-size:120%; text-align: center;"><?php
+                    if ($gender == "Male"){
+                        echo round($calculatedOutputMale * RUN_MODIFIER);
+                    }
+                    else if($gender == "Female"){
+                        echo round($calculatedOutputFemale * RUN_MODIFIER);
+                    }
+                    ?> <strong>calories</strong></p>
             </div>
 
             <div id="Weightlifting" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Coffee</h5>
-                <p class="w3-text-grey">Regular coffee 2.50</p><br>
-
-
-
+                <h5>While weightlifting, you burned:</h5>
+                <strong><p class="w3-text-grey" style="font-size:120%; text-align: center;"><?php
+                    if ($gender == "Male"){
+                        echo round($calculatedOutputMale * WEIGHTLIFT_MODIFIER);
+                    }
+                    else if($gender == "Female"){
+                        echo round($calculatedOutputFemale * WEIGHTLIFT_MODIFIER);
+                    }
+                    ?> <strong>calories</strong></p>
             </div>
 
             <div id="Swimming" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Coffee</h5>
-                <p class="w3-text-grey">Regular coffee 2.50</p><br>
-
-
-
+                <h5>While swimming, you burned:</h5>
+                <strong><p class="w3-text-grey" style="font-size:120%; text-align: center;"><?php
+                    if ($gender == "Male"){
+                        echo round($calculatedOutputMale * SWIM_MODIFIER);
+                    }
+                    else if($gender == "Female"){
+                        echo round($calculatedOutputFemale * SWIM_MODIFIER);
+                    }
+                    ?> <strong>calories.</strong></p>
             </div>
 
             <hr>
@@ -243,9 +266,7 @@
     <div class="w3-container" id="where" style="padding-bottom:32px;">
         <div class="w3-content" style="max-width:700px">
             <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CREATE AN ACCOUNT</span></h5>
-            <p>Find us at some address at some place.</p>
-            <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-            <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+            <p>Want to keep track of your exercise habits? Why not create an account so we can do it for you!</p>
             <form action="/action_page.php" target="_blank">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
@@ -261,24 +282,10 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p>Placeholder</p>
 </footer>
 
 <script>
-    // Tabbed Menu
-    function openResults(evt, resultSet) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("menu");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-        }
-        document.getElementById(resultSet).style.display = "block";
-        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-    }
     document.getElementById("myLink").click();
 </script>
 
