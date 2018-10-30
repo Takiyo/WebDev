@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -6,7 +7,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/displayfunctions.js"></script>
+<script type="text/javascript" src="js/displayfunctions.js"></script>
+<script type="text/javascript" defer src="js/validation.js"></script>
 <style>
     body, html {
         height: 100%;
@@ -31,7 +33,7 @@
             <a href="index.php" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s4">
-            <a href="#signup" class="w3-button w3-block w3-black">SIGN UP</a>
+            <a href="signup.php" class="w3-button w3-block w3-black">SIGN UP</a>
         </div>
         <div class="w3-col s4">
             <a href="#login" class="w3-button w3-block w3-black">LOG IN</a>
@@ -65,6 +67,7 @@
 
             $output_form = 'no';
             $story_exists = false;
+            $logged_in = false;
 
             if (isset($_POST['submit'])) {
 
@@ -84,14 +87,28 @@
 
 
                 $calculatedOutputMale = ((-55.0969 + (0.6309 * (int)$heartrate) + (0.090174 * (int)$weight) + (0.2017 * (int)$age)) / 4.184) * (int)$duration;
-
                 $calculatedOutputFemale = ((-20.4022 + (0.4472 * (int)$heartrate) - (0.057288 * (int)$weight) + (0.074 * (int)$age)) / 4.184) * (int)$duration;
+
+                // Placeholders
+                $calculatedCalories = $calculatedOutputMale;
+                if ($gender == "Nonbinary"){
+                    $gender = "Male";
+                }
+
+
+
+                if ($gender == "Male"){
+                    $calculatedCalories = $calculatedOutputMale;
+                } else if ($gender == "Female") {
+                    $calculatedCalories = $calculatedOutputFemale;
+                }
+
 
 
 
                 if (empty($gender) || empty($age) || empty($weight) ||
                     empty($duration) || empty($heartrate)){
-                    echo '<h2 style="color:red; border:1px dotted black; width:35%;">Please fill out the entire form.</h2></br>';
+                    echo '<h2 class="error">Please fill out the entire form.</h2></br>';
                     $output_form = 'yes';
                     $focusOrNot="";
                 }
@@ -127,17 +144,16 @@
                 }
 
 
-
                 // Insert form data into database
-                $stmt = $pdo->prepare('INSERT INTO exercise_log (age, weight, duration, heartrate) VALUES (?,?,?,?)');
-                $stmt->execute([$age, $weight, $duration, $heartrate]);
+                $stmt = $pdo->prepare('INSERT INTO exercise_log (age, weight, duration, date, heartrate, calories) VALUES (?,?,?,?,?,?)');
+                $stmt->execute([$age, $weight, $duration, date("Y-m-d H:i:s"), $heartrate, $calculatedCalories]); //Date is now.
+
+
+
 
                 // Get & display data back from database
                 $stmt = $pdo->query('SELECT * FROM exercise_log');
                 $stmt->execute();
-
-
-
                 foreach($stmt as $row)
                 {
 
@@ -154,23 +170,30 @@
                 ?>
                 <form action="index.php<?php echo "#focushere"?>" method="post" enctype="multipart/form-data">
                     <legend>Enter your Gender:</legend>
-                    <input class="w3-input w3-padding-8 w3-border" type="text" name="gender" list="genderList">
+                    <input id="genderInput" class="w3-input w3-padding-8 w3-border" type="text" name="gender" list="genderList" onblur="isGender()">
                     <datalist id="genderList">
                         <option value="Male">
                         <option value="Female">
-                    </datalist></br><br>
+                        <option value="Nonbinary">
+                    </datalist>
+                    <span id="genderError" class="error"></span></br><br>
 
                     <legend>Enter your age:</legend>
-                    <input class="w3-input w3-padding-8 w3-border" type="text" name="age"/><br><br>
+                    <input id="ageInput" class="w3-input w3-padding-8 w3-border" type="number" name="age" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
+                    <span id="ageError" class="error"></span><br><br>
 
                     <legend>Enter your weight (pounds):</legend>
-                    <input class="w3-input w3-padding-8 w3-border" type="text" name="weight"/><br><br>
+                    <input id="weightInput" class="w3-input w3-padding-8 w3-border" type="number" name="weight" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
+                    <span id="weightError" class="error"></span><br><br>
+
 
                     <legend>How long you exercised (minutes):</legend>
-                    <input class="w3-input w3-padding-8 w3-border" type="text" name="duration"/><br><br>
+                    <input id="durationInput" class="w3-input w3-padding-8 w3-border" type="number" name="duration" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
+                    <span id="durationError" class="error"></span><br><br>
 
                     <legend>What was your average heart rate (BPM):</legend>
-                    <input class="w3-input w3-padding-8 w3-border" type="text" name="heartrate"/><br><br>
+                    <input id="heartrateInput" class="w3-input w3-padding-8 w3-border" type="number" name="heartrate" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
+                    <span id="heartrateError" class="error"></span><br><br>
 
                     <input class="w3-button w3-black w3-input" type="submit" value="Calculate" name="submit" style="margin-bottom:50px"/>
 
@@ -178,10 +201,7 @@
                 <?php
             }
             ?>
-
-
         </div>
-    </div>
 
     <!-- Menu Container -->
 <?php
@@ -262,20 +282,18 @@
         </div>
     </div>
 
-    <!-- Contact/Area Container -->
-    <div class="w3-container" id="where" style="padding-bottom:32px;">
+    <!-- Sign Up -->
+<?php
+    if ($logged_in == false)
+    {
+?>
+    <div class="w3-container" style="padding-bottom:32px;">
         <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CREATE AN ACCOUNT</span></h5>
+            <h5 class="w3-center w3-padding-48"><a class="w3-tag w3-wide">CREATE AN ACCOUNT</a></h5>
             <p>Want to keep track of your exercise habits? Why not create an account so we can do it for you!</p>
-            <form action="/action_page.php" target="_blank">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-                <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-            </form>
         </div>
     </div>
+<?php } ?>
 
     <!-- End page content -->
 </div>
