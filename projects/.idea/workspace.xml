@@ -4,20 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/project02/js/validation.js" description="//red border" line="113" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bec008e3-e548-45fa-9ec1-97395b11135a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project02/images/bbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project02/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project02/sql/exercise_log.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project02/sql/exercise_user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../labs/week07/mismatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/week07/mismatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/connectvars.php" beforeDir="false" afterPath="$PROJECT_DIR$/project02/connectvars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/images/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project02/images/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/project02/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/project02/js/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/project02/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project02/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/project02/signup.php" afterDir="false" />
-    </list>
+    <list default="true" id="bec008e3-e548-45fa-9ec1-97395b11135a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +29,7 @@
     <session id="333220686">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
@@ -122,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project02/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+            <state relative-caret-position="243">
+              <caret line="77" column="44" lean-forward="true" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -351,16 +338,15 @@
       <workItem from="1540522494734" duration="12870000" />
       <workItem from="1540748337931" duration="3334000" />
       <workItem from="1540756387740" duration="2636000" />
-      <workItem from="1540837615343" duration="29384000" />
+      <workItem from="1540837615343" duration="29566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48224000" />
+    <option name="totallyTimeSpent" value="48406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="650" y="0" width="1277" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22021364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -502,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project02/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        <state relative-caret-position="243">
+          <caret line="77" column="44" lean-forward="true" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
