@@ -36,7 +36,7 @@
             <a href="signup.php" class="w3-button w3-block w3-black">SIGN UP</a>
         </div>
         <div class="w3-col s4">
-            <a href="#login" class="w3-button w3-block w3-black">LOG IN</a>
+            <a href="login.php" class="w3-button w3-block w3-black">LOG IN</a>
         </div>
     </div>
 </div>
@@ -79,20 +79,20 @@ echo '<div class="col-sm-6 offset-sm-3 center">';
 
 
       if (!empty($username) && !empty($password1) && !empty($password2) && ($password1 == $password2)) {
-      // Make sure someone isn't already registered using this username
-      $query = "SELECT * FROM exercise_user WHERE username = '$username'";
-      $data = mysqli_query($dbc, $query);
-      if (mysqli_num_rows($data) == 0) {
-        // The username is unique, so insert the data into the database
-        $query = "INSERT INTO exercise_user (first_name, last_name, gender, birthdate, weight, username, password) VALUES ('$first_name', '$last_name', '$gender', '$birthday', '$weight', '$username', SHA('$password1'))";
-        mysqli_query($dbc, $query);
+          // Make sure someone isn't already registered using this username
+          $query = "SELECT * FROM exercise_user WHERE username = '$username'";
+          $data = mysqli_query($dbc, $query);
+          if (mysqli_num_rows($data) == 0) {
+              // The username is unique, so insert the data into the database
+              $query = "INSERT INTO exercise_user (first_name, last_name, gender, birthdate, weight, username, password) VALUES ('$first_name', '$last_name', '$gender', '$birthday', '$weight', '$username', SHA('$password1'))";
+              mysqli_query($dbc, $query);
 
-        // Confirm success with the user
-        echo '<h4>Your new account has been successfully created. You\'re now ready to <a href="login.php">log in</a>.</h4>';
+              // Confirm success with the user
+              echo '<h4>Your new account has been successfully created. You\'re now ready to <a href="login.php">log in</a>.</h4>';
 
-        mysqli_close($dbc);
-        exit();
-      }
+              mysqli_close($dbc);
+              exit();
+          }
       else {
         // An account already exists for this username, so display an error message
         echo '<p class="error">An account already exists for this username. Please choose a different name.</p>';
@@ -114,10 +114,10 @@ echo '<div class="col-sm-6 offset-sm-3 center">';
     <fieldset>
       <legend>Please tell us about yourself!</legend>
         <label for="firstnameInput">First Name:</label>
-        <input type="text" id="firstname" class="w3-input w3-padding-8 w3-border" name="firstname" onblur="requiredField(this)" required/><br>
+        <input type="text" id="firstnameInput" class="w3-input w3-padding-8 w3-border" name="firstname" onblur="requiredField(this)" required/><br>
 
         <label for="lastnameInput">Last Name:</label>
-        <input type="text" id="lastname" class="w3-input w3-padding-8 w3-border" name="lastname" onblur="requiredField(this)" required/><br>
+        <input type="text" id="lastnameInput" class="w3-input w3-padding-8 w3-border" name="lastname" onblur="requiredField(this)" required/><br>
 
         <label for="genderInput">Gender:</label>
         <input id="genderInput" class="w3-input w3-padding-8 w3-border" type="text" name="gender" list="genderList" onblur="isGender()">
@@ -126,25 +126,25 @@ echo '<div class="col-sm-6 offset-sm-3 center">';
             <option value="Female">
             <option value="Nonbinary">
         </datalist>
-        <span id="genderError" class="error"></span></br><br>
+        <span id="genderError" class="error"></span><br><br>
 
         <label for="birthdayInput">Birth date:</label>
         <input type="date" id="birthdayInput" class="w3-input w3-padding-8 w3-border" name="birthday" onblur="requiredField(this)" required/><br>
 
-        <label for="weight">Weight (In Pounds):</label>
+        <label for="weightInput">Weight (In Pounds):</label>
         <input type="text" id="weightInput" class="w3-input w3-padding-8 w3-border" name="weight" onblur="requiredField(this)" required/><br>
 
         <hr>
 
-        <label for="username">Username:</label>
-      <input type="text" id="username" name="username" class="w3-input w3-padding-8 w3-border"  value="<?php if (!empty($username)) echo $username; ?>"
+        <label for="usernameInput">Username:</label>
+      <input type="text" id="usernameInput" name="username" class="w3-input w3-padding-8 w3-border"  value="<?php if (!empty($username)) echo $username; ?>"
              onblur="requiredField(this)" required/><br />
 
-      <label for="password1">Password:</label>
-      <input type="password" id="password1" name="password1" class="w3-input w3-padding-8 w3-border" onblur="requiredField(this)" required/><br />
+      <label for="password1Input">Password:</label>
+      <input type="password" id="password1Input" name="password1" class="w3-input w3-padding-8 w3-border" onblur="requiredField(this)" required/><br />
 
-      <label for="password2">Password (retype):</label>
-      <input type="password" id="password2" name="password2" class="w3-input w3-padding-8 w3-border" onblur="requiredField(this)" required/><br />
+      <label for="password2Input">Password (retype):</label>
+      <input type="password" id="password2Input" name="password2" class="w3-input w3-padding-8 w3-border" onblur="requiredField(this)" required/><br />
 
     </fieldset>
       <br>

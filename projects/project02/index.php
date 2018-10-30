@@ -36,7 +36,7 @@
             <a href="signup.php" class="w3-button w3-block w3-black">SIGN UP</a>
         </div>
         <div class="w3-col s4">
-            <a href="#login" class="w3-button w3-block w3-black">LOG IN</a>
+            <a href="login.php" class="w3-button w3-block w3-black">LOG IN</a>
         </div>
     </div>
 </div>
@@ -44,7 +44,12 @@
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-        <span class="w3-tag">LOGIN STATUS PLACEHOLDER</span>
+        <?php
+        if (isset($_SESSION['username'])) {
+
+            echo '<a style="text-decoration:none;" href="logout.php" class="w3-tag">LOG OUT</a>';
+        }
+    ?>
     </div>
     <div class="w3-display-middle w3-center">
         <span id="titleheader" class="w3-text-white" style="font-size:90px">Health<br>Watch</span>
@@ -77,13 +82,6 @@
                 $weight = $_POST['weight'];
                 $duration= $_POST['duration'];
                 $heartrate = $_POST['heartrate'];
-
-
-                //testing
-              //  if (empty($gender)){
-                //    $gender = "Female";
-               // }
-
 
 
                 $calculatedOutputMale = ((-55.0969 + (0.6309 * (int)$heartrate) + (0.090174 * (int)$weight) + (0.2017 * (int)$age)) / 4.184) * (int)$duration;
@@ -169,7 +167,7 @@
             if (true){
                 ?>
                 <form action="index.php<?php echo "#focushere"?>" method="post" enctype="multipart/form-data">
-                    <legend>Enter your Gender:</legend>
+                    <label for="genderInput">Enter your gender:</label>
                     <input id="genderInput" class="w3-input w3-padding-8 w3-border" type="text" name="gender" list="genderList" onblur="isGender()">
                     <datalist id="genderList">
                         <option value="Male">
@@ -178,20 +176,20 @@
                     </datalist>
                     <span id="genderError" class="error"></span></br><br>
 
-                    <legend>Enter your age:</legend>
-                    <input id="ageInput" class="w3-input w3-padding-8 w3-border" type="number" name="age" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
+                    <label for="ageInput">Enter your age:</label>
+                    <input id="ageInput" class="w3-input w3-padding-8 w3-border" type="number" name="age" onkeypress="NumericKeyPress(event)" onblur="requiredField(this), inAgeRange(1, 150, this)" required/>
                     <span id="ageError" class="error"></span><br><br>
 
-                    <legend>Enter your weight (pounds):</legend>
+                    <label for="weightInput">Enter your weight (pounds):</label>
                     <input id="weightInput" class="w3-input w3-padding-8 w3-border" type="number" name="weight" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
                     <span id="weightError" class="error"></span><br><br>
 
 
-                    <legend>How long you exercised (minutes):</legend>
+                    <label for="durationInput">How long you exercised (minutes):</label>
                     <input id="durationInput" class="w3-input w3-padding-8 w3-border" type="number" name="duration" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
                     <span id="durationError" class="error"></span><br><br>
 
-                    <legend>What was your average heart rate (BPM):</legend>
+                    <label for="heartrateInput">What was your average heart rate (BPM):</label>
                     <input id="heartrateInput" class="w3-input w3-padding-8 w3-border" type="number" name="heartrate" onkeypress="NumericKeyPress(event)" onblur="requiredField(this)" required/>
                     <span id="heartrateError" class="error"></span><br><br>
 
@@ -289,8 +287,8 @@
 ?>
     <div class="w3-container" style="padding-bottom:32px;">
         <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-48"><a class="w3-tag w3-wide">CREATE AN ACCOUNT</a></h5>
-            <p>Want to keep track of your exercise habits? Why not create an account so we can do it for you!</p>
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CREATE AN ACCOUNT</span></h5>
+            <p>Want to keep track of your exercise habits? Why not <a href="signup.php">create an account</a> so we can do it for you!</p>
         </div>
     </div>
 <?php } ?>
@@ -300,7 +298,7 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-    <p>Placeholder</p>
+    <p></p>
 </footer>
 
 <script>

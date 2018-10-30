@@ -1,5 +1,6 @@
 document.getElementById("genderInput").addEventListener("onblur", isGender);
 document.getElementById("ageInput").addEventListener("onkeypress", NumericKeyPress);
+document.getElementById("ageInput").addEventListener("onblur", inAgeRange);
 document.getElementById("weightInput").addEventListener("onkeypress", NumericKeyPress);
 document.getElementById("durationInput").addEventListener("onkeypress", NumericKeyPress);
 document.getElementById("heartrateInput").addEventListener("onkeypress", NumericKeyPress);
@@ -117,5 +118,16 @@ function requiredField(input) {
     } else {
         //green border
         input.style.borderColor = "#2ecc71";
+    }
+}
+
+
+function inAgeRange(lower, upper, element){
+    let errorMsg = document.getElementById("ageError");
+    if (element.value < lower || element.value > upper){
+        errorMsg.InnerHTML = "Age must be within 1 and 150.";
+        errorMsg.setAttribute("style" , "display:block;");
+    } else{
+        errorMsg.setAttribute("style" , "display:none;")
     }
 }
