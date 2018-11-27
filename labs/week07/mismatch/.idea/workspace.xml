@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b30b3d77-24b2-40de-abf4-180f95e57838" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../projects/project02/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/project02/images/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/project02/images/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/project02/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/project02/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/project02/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/project02/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/project02/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/project02/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/_templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/_templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/css/general.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/riskyjobs_fireman.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/public/img/riskyjobs_fireman.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/riskyjobs_title.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/public/img/riskyjobs_title.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../mini-master/mini-master/public/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +20,9 @@
     <session id="-1996285413">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,20 +57,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="53" column="66" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="66" />
+            <state relative-caret-position="-198">
+              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" selection-start-line="21" selection-end-line="22" />
+            <state relative-caret-position="425">
+              <caret line="25" column="116" selection-start-line="25" selection-start-column="116" selection-end-line="25" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -78,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
+            <state relative-caret-position="1173">
               <caret line="69" column="67" lean-forward="true" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
             </state>
           </provider>
@@ -101,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/validation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="442">
               <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
             </state>
           </provider>
@@ -148,6 +148,7 @@
       <find>cookie</find>
       <find>log out</find>
       <find>user_id</find>
+      <find>PDO</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,11 +222,12 @@
       <workItem from="1539740502189" duration="3002000" />
       <workItem from="1539743697295" duration="1644000" />
       <workItem from="1540849460784" duration="9090000" />
+      <workItem from="1543015188296" duration="19000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13736000" />
+    <option name="totallyTimeSpent" value="13755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -272,6 +274,13 @@
     <entry file="file://$PROJECT_DIR$/romanticbg.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="67" lean-forward="true" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/profile.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -282,22 +291,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appvars.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="442">
           <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appvars.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -309,24 +311,24 @@
     <entry file="file://$PROJECT_DIR$/editprofile.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="53" column="66" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="69" column="67" lean-forward="true" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+        <state relative-caret-position="1615">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" selection-start-line="21" selection-end-line="22" />
+        <state relative-caret-position="425">
+          <caret line="25" column="116" selection-start-line="25" selection-start-column="116" selection-end-line="25" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
         </state>
       </provider>
     </entry>
