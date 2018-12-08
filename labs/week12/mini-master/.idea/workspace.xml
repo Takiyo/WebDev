@@ -2,54 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6baaf1-8f11-42c7-9d91-f1941f8403b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/mini-master.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/mini-master.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_install/01-create-database.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_install/02-create-table-song.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_install/03-insert-demo-data-into-table-song.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_install/mini-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_vagrant/Vagrantfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/_vagrant/bootstrap.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/config/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/controller/home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/controller/problem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/controller/songs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/core/application.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/core/controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/libs/helper.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/model/model.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/_templates/footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/_templates/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/css/general.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/example_one.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/example_two.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/home/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/problem/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/songs/edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/application/view/songs/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/img/demo-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/img/riskyjobs_fireman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/img/riskyjobs_title.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mini-master/mini-master/public/js/application.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week07/mismatch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week07/mismatch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../projects/project03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../projects/project03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/mini-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/mini-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_install/01-create-database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_install/02-create-table-song.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_install/03-insert-demo-data-into-table-song.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_install/mini-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_vagrant/Vagrantfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/_vagrant/bootstrap.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/config/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/controller/home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/controller/problem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/controller/songs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/core/application.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/core/controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/libs/helper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/model/model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/_templates/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/_templates/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/home/example_one.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/home/example_two.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/home/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/problem/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/songs/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/application/view/songs/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/public/img/demo-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week13/ch11/mini-master/mini-master/public/js/application.js" beforeDir="false" />
     </list>
     <ignored path="mini-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,21 +113,33 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1419537308">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="mini-master" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/songs/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/model/model.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,11 +194,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="26" column="11" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="52" column="58" lean-forward="true" selection-start-line="40" selection-start-column="69" selection-end-line="52" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -276,7 +294,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -301,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,6 +330,12 @@
               <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="mini-master" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
@@ -374,12 +397,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\ProgramFilesD\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../projects/project03" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../week13/ch11" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
@@ -433,16 +457,21 @@
       <workItem from="1543014236855" duration="17627000" />
       <workItem from="1543092239451" duration="5375000" />
       <workItem from="1543099544756" duration="18000" />
+      <workItem from="1543345632339" duration="619000" />
+      <workItem from="1543736556220" duration="609000" />
+      <workItem from="1543783801008" duration="16000" />
+      <workItem from="1543865119239" duration="358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33955000" />
+    <option name="totallyTimeSpent" value="35557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1098081" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11513859" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -542,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/application.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -611,6 +633,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/jobs/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="6" selection-start-column="5" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -625,17 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/jobs/index.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="6" selection-start-column="5" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="595">
+          <caret line="52" column="58" lean-forward="true" selection-start-line="40" selection-start-column="69" selection-end-line="52" selection-end-column="58" />
         </state>
       </provider>
     </entry>

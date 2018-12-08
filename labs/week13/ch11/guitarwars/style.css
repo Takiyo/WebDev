@@ -1,0 +1,39 @@
+.error {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.topscoreheader {
+  text-align: center;
+  font-size: 200%;
+  background-color: #36407F;
+  color: #FFFFFF;
+}
+
+.score {
+  background-color:black;
+  font-size:150%;
+  color: white;
+}
+
+.scoreinfo {
+  vertical-align: top;
+  padding-right:15px;
+  color:white;
+}
+
+#containerid{
+  border: 5px solid cyan;
+  border-radius:10px;
+}
+body{
+  background-image: url("https://i.ytimg.com/vi/SD8LYjRJEq4/maxresdefault.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
