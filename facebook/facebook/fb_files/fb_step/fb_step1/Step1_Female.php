@@ -3,10 +3,26 @@
 	error_reporting(1);
 	if(isset($_SESSION['tempfbuser']))
 	{
-		mysql_connect("localhost","root","");
-		mysql_select_db("faceback");
-		$user=$_SESSION['tempfbuser'];
-		$que1=mysql_query("select * from users where Email='$user' ");
+		//mysql_connect("localhost","root","");
+		//mysql_select_db("faceback");
+
+        //PDO
+        $dsn = "mysql:host=localhost;dbname=tbrytowski;charset=utf8mb4";
+        $options = [
+            PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
+        ];
+
+        $user=$_SESSION['tempfbuser'];
+
+        $pdo = new PDO($dsn, "root", "", $options);
+        $sql = "select * from users where Email= :user";
+        $stmt = $pdo->prepare($sql);
+        $parameters = array(':email' => $email);
+        $stmt->execute($parameters);
+
+        $que1=mysql_query("select * from users where Email='$user' ");
 		$rec=mysql_fetch_array($que1);
 		$userid=$rec[0];
 		$gender=$rec[4];
