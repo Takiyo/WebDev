@@ -1,4 +1,12 @@
 <?php
+require_once('connectvars.php');
+$dsn = "mysql:host=localhost;dbname=tbrytowski;charset=utf8mb4";
+$options = [
+    PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
+];
+
 	session_start();
 	error_reporting(1);
 	if(isset($_SESSION['tempfbuser']))
@@ -7,12 +15,7 @@
 		//mysql_select_db("faceback");
 
         //PDO
-        $dsn = "mysql:host=localhost;dbname=tbrytowski;charset=utf8mb4";
-        $options = [
-            PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
-        ];
+
 
         $user=$_SESSION['tempfbuser'];
 
@@ -22,15 +25,28 @@
         $parameters = array(':email' => $email);
         $stmt->execute($parameters);
 
-        $que1=mysql_query("select * from users where Email='$user' ");
-		$rec=mysql_fetch_array($que1);
+        //$que1=mysql_query("select * from users where Email='$user' ");
+
+
+		$rec = $stmt->fetch(PDO::FETCH_ASSOC);
+		//$rec=mysqli_fetch_array($quel)
 		$userid=$rec[0];
 		$gender=$rec[4];
+
+
 		if($gender=="Female")
 		{
-			$que2=mysql_query("select * from user_profile_pic where user_id=$userid");
-			$count1=mysql_num_rows($que2);
-			if($count1==0)
+			//$que2=mysql_query("select * from user_profile_pic where user_id=$userid");
+
+            $sql = "select * from user_profile_pic where user_id = :user_id";
+            $count1=mysqli_num_rows($sql);
+
+            $stmt = $pdo->prepare($sql);
+            $parameters = array(':user_id' => $user_id);
+            $stmt->execute($parameters);
+
+
+            if($count1==0)
 			{
 		
 ?>

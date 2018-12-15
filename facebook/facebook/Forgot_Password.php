@@ -1,5 +1,6 @@
 <?php
 	include("Forgot_Password_background.php");
+require_once('connectvars.php');
 ?>
 <html>
 <head>

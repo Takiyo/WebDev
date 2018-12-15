@@ -1,3 +1,6 @@
+<?php
+require_once('connectvars.php');
+?>
 <html>
 <head>
 	<script src="background_file/background_js/event.js"></script>

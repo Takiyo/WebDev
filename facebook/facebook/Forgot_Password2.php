@@ -1,5 +1,7 @@
 <?php
 	include("Login.php");
+require_once('connectvars.php');
+require_once('connectvars.php');
 ?>
 <?php
 	mysql_connect("localhost","root","");

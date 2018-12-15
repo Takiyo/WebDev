@@ -42,7 +42,7 @@
 
       // Approve the score by setting the approved column in the database
       $query = "UPDATE guitarwars SET approved = 1 WHERE id = $id";
-      mysqli_query($dbc, $query);
+      mysqli_query($dbc, $query);dawd
       mysqli_close($dbc);
 
       // Confirm success with the user

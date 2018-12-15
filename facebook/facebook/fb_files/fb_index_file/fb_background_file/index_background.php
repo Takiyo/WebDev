@@ -1,7 +1,9 @@
 <html>
 <head>
 <script>
-	function open_developer_details()
+    require_once('connectvars.php');
+
+    function open_developer_details()
 	{
 		document.getElementById("my_details").style.display='block';
 		document.getElementById("my_name").style.textDecoration = "underline"

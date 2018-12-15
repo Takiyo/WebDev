@@ -2,14 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6baaf1-8f11-42c7-9d91-f1941f8403b3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../labs/mvc simple/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../facebook/facebook/connectvars.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/.idea/guitarwars.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test/facebook/facebook/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../facebook/facebook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password2.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password4.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password_background.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Forgot_Password_background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/How to run.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Invalid_Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Invalid_Password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Invalid_Username.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Invalid_Username.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Group_Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Group_Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Search_Display.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Search_Display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Search_Display_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Search_Display_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/Settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/background.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_home/feedback.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_index_file/fb_SignUp_file/SignUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_index_file/fb_SignUp_file/SignUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_index_file/fb_background_file/index_background.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_index_file/fb_background_file/index_background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_logout/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_logout/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/Search_Display.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/Search_Display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/background.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/open_timeline_photos_album.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/open_timeline_photos_album.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_profile/photos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step1/Step1_Female.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step1/Step1_Female.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../labs/mvc simple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../labs/mvc simple/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step1/Step1_Male.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step1/Step1_Male.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step2/Secret_Question1.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step2/Secret_Question1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step3/Secret_Question2.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_step/fb_step3/Secret_Question2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/Search_Display.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/Search_Display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/background.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/open_timeline_photos_album.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/open_timeline_photos_album.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/photos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/view_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../facebook/facebook/fb_files/fb_view_profile/view_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/approvescore.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/approvescore.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="mini-master.iws" />
@@ -21,7 +56,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -31,18 +66,21 @@
     <session id="909135839">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="3" />
+          <entry key="php" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -52,15 +90,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/application.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+            <state relative-caret-position="408">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -82,17 +111,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="323">
               <caret line="19" column="19" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/model/model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+            <state relative-caret-position="1309">
+              <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -104,9 +133,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/view/songs/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -126,8 +153,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="850">
               <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/connectvars.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -146,6 +182,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/connectvars.php" />
       </list>
     </option>
   </component>
@@ -158,77 +195,23 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="160" />
+    <option name="y" value="38" />
     <option name="width" value="819" />
-    <option name="height" value="1047" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mini-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mini-master" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="songs" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="D:\ProgramFilesD\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projects/blogging/mini-master" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -266,21 +249,21 @@
       <workItem from="1540865301285" duration="1261000" />
       <workItem from="1541470362002" duration="152000" />
       <workItem from="1544297619818" duration="4113000" />
+      <workItem from="1544336787694" duration="1590000" />
+      <workItem from="1544835303061" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5526000" />
+    <option name="totallyTimeSpent" value="7126000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="819" height="1047" extended-state="1" />
+    <frame x="160" y="38" width="819" height="1017" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21444201" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21343873" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -291,11 +274,34 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21343873" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -321,30 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/libs/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/problem.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -354,23 +336,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/core/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        <state relative-caret-position="408">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/songs/index.php">
+    <entry file="file://$PROJECT_DIR$/application/controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170" />
+        <state relative-caret-position="323">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/model/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/songs.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/model.php">
+    <entry file="file://$PROJECT_DIR$/application/view/songs/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/problem.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libs/helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+        <state relative-caret-position="272">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../labs/week13/ch11/guitarwars/connectvars.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

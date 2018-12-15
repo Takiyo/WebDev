@@ -1,5 +1,6 @@
 <?php
 	include("Login.php");
+require_once('connectvars.php');
 ?>
 <html>
 <head>

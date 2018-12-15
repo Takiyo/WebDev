@@ -4,6 +4,8 @@
 </head>
 <body>
 <?php
+require_once('connectvars.php');
+
 error_reporting(1);
 	$id=$_GET['photo'];
 	session_start();

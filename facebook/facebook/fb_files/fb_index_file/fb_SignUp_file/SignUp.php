@@ -1,6 +1,8 @@
 <?php
+require_once('connectvars.php');
 if(isset($_POST['signup']))
 {
+
 	error_reporting(1);
 
     $Email=$_POST['email'];

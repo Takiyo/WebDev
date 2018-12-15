@@ -1,4 +1,5 @@
 <?php
+require_once('connectvars.php');
 if(isset($_POST['Login']))
 {error_reporting(1);
 	mysql_connect("localhost","root","");

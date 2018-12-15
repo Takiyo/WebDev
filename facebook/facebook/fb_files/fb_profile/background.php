@@ -1,4 +1,6 @@
 <?php
+require_once('connectvars.php');
+
 error_reporting(1);
 		$user=$_SESSION['fbuser'];
 		mysql_connect("localhost","root","");
