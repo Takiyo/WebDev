@@ -22,8 +22,8 @@ if(isset($_POST['register'])){
 
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
+    $pass2 = !empty($_POST['password2']) ? trim($_POST['password2']) : null;
 
-    //TODO takiyo: Error checking (username characters, password length, etc).
 
     $sql = "SELECT COUNT(username) AS num FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);
@@ -37,6 +37,10 @@ if(isset($_POST['register'])){
     //TODO takiyo: handle if username already exists in a better way
     if($row['num'] > 0){
         die('That username already exists!');
+    } else if($pass != $pass2){
+        echo '<script type="text/javascript">',
+             'comparePasswords();',
+             '</script>';
     }
 
     $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
@@ -50,13 +54,14 @@ if(isset($_POST['register'])){
     $result = $stmt->execute();
 
     if($result){
-        //TODO takiyo: link to login page once created OR log them in
-        echo 'Thank you for registering with our website.';
+        echo 'Thank you for registering with our website. Log in 
+              <a href="' . URL . 'home/exmapleone"><strong>here!</strong></a>';
+       // header('location: ' . URL . 'home/exampleone');
+
     }
 
 }
-//TODO takiyo: have 2 password inputs and compare them via js
-//TODO takiyo: js validation
+//TODO takiyo: more js validation
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,13 +71,21 @@ if(isset($_POST['register'])){
 </head>
 <body>
 <h1>Register</h1>
-<form action="<?php echo URL;?>" method="post">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" required><br>
-    <label for="password">Password</label>
-    <input type="text" id="password" name="password" required><br>
-    <input type="submit" name="register" value="Register"></button>
-</form>
+<div class="formcontainer" style="width:500px;clear:both;">
+    <form onsubmit="" action="<?php echo URL;?>"  method="post">
+        <div id="passError" style="color:red; background-color:lightgoldenrodyellow; text-align:center; display:none;">
+            Please make sure your passwords are the same!</div>
+        <div id="usernameSpecialError" style="color:red; background-color:lightgoldenrodyellow; text-align:center; display:none;">
+            Please make sure you have no special characters in your username!</div>
+        <label for="username"">Username</label>
+        <input type="text" id="username" name="username" required onblur="return validateUsername();"><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="password2">Re-type Password</label>
+        <input type="password" id="password2" name="password2" onblur="return comparePasswords()"required><br><br>
+        <input type="submit" name="register" value="Register"></button>
+    </form>
+</div>
 <br>
 <p>Already registered? Log in <a href="<?php echo URL;?>home/exampleone"><strong>here.</strong></p>
 </body>

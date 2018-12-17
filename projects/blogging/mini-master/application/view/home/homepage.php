@@ -56,32 +56,31 @@ if (isset($_POST['postSubmit'])){
 //TODO takiyo: KNOWN BUG - text areas have 8 blank spaces in them by default??? they didn't earlier though?????????????
 ?>
 <div class="container">
-    <form action="<?php echo URL;?>home/homepage" method="post">
-        <textarea class="postInput" name="postTitle" placeholder="Title" style="width:350px; height:35px;resize:none;">
-        </textarea>
+    <form id="postform" action="<?php echo URL;?>home/homepage#postform" method="post">
+        <textarea class="postInput" name="postTitle" placeholder="Title" style="width:350px; height:35px;resize:none;"></textarea>
         <br>
-        <textarea class="postInput" name="postContent" placeholder="What's on your mind?" maxlength="5000" style="width:600px; min-height:125px; resize:none;">
-        </textarea>
+        <textarea class="postInput" name="postContent" placeholder="What's on your mind?" maxlength="5000" style="width:600px; min-height:125px; resize:none;"></textarea>
         <br>
         <input type="submit" value="Share" name="postSubmit"/>
     </form>
 </div>
 <div class="container">
     <?php
+
     $sql = "SELECT * FROM posts";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute();
-
     //foreach ($stmt->fetch(PDO::FETCH_ASSOC) as $postRow){
    //     echo $postRow['user_id'];
    // }
     while ($postRow = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $sql = "SELECT * FROM users WHERE id = " . $postRow['user_id'];
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-        $userLoop = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        echo "<h2><strong>" . $userLoop['username'] . "</strong> shared a blog post.</h2>
+        $sql = "SELECT * FROM users WHERE id = " . $postRow['user_id'];
+        $ltmt = $pdo->prepare($sql);
+        $ltmt->execute();
+        $userLoop = $ltmt->fetch(PDO::FETCH_ASSOC);
+
+        echo "<h5><strong>" . $userLoop['username'] . "</strong> shared a blog post.</h5>
         <p style='color:dimgrey;'>posted " . $postRow['date'] . "</p>
         <p>" . $postRow['content'] . "</p>";
     }

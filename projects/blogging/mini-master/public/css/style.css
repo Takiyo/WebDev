@@ -35,6 +35,9 @@ body {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 33px;
+    background-color:darkslategrey;
+    color:white;
+
 }
 .container a {
     color: #222;
@@ -87,4 +90,12 @@ body {
 }
 .footer a {
     color: #454545;
+}
+.formcontainer{
+    width:500px;
+    clear:both;
+}
+.formcontainer input{
+    width:100%;
+    clear:both;
 }

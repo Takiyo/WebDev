@@ -54,4 +54,17 @@ class Home extends Controller
         require APP . 'view/_templates/footer.php';
 
     }
+    public function adminLogin(){
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/adminlogin.php';
+        require APP . 'view/_templates/footer.php';
+    }
+
+    public function phpValidationFailed(){
+        require APP . 'view/_templates/header.php';
+        require APP . 'view/home/phpvalidationfailed.php';
+        require APP . 'view/_templates/footer.php';
+
+    }
+
 }

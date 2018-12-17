@@ -1,6 +1,6 @@
 <div class="container">
     <?php
-
+//LOGIN
 
 
     $pdoOptions = array(
@@ -31,8 +31,7 @@
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if($user === false){
-    //TODO takiyo: handle failed username better. possibly display:hidden->display:block an error div
-    die('Incorrect username / password combination!');
+        header('Location: phpvalidationfailed');
     } else{
 
     $validPassword = password_verify($passwordAttempt, $user['password']);
@@ -63,12 +62,14 @@
     </head>
     <body>
     <h1>Login</h1>
-    <form action="<?php echo URL;?>home/exampleone" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password</label>
-        <input type="text" id="password" name="password"><br>
-        <input type="submit" name="login" value="Login">
-    </form>
+    <div class="formcontainer" style="width:500px;clear:both;">
+        <form action="<?php echo URL;?>home/exampleone" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" name="login" value="Login">
+        </form>
+    </div>
     </body>
     </html></div>

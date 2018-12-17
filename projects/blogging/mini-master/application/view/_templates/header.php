@@ -13,11 +13,12 @@
     <!-- CSS -->
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
     <link href="<?php echo URL; ?>css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="<?php echo URL;?>js/validation.js"></script>
 </head>
 <body>
     <!-- logo -->
     <div class="logo">
-        Your blog title here!
+        Zuckerberg Memoirs
     </div>
 
     <!-- navigation -->
