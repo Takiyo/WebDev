@@ -29,17 +29,12 @@ function draw(){
     incrementer = 0;
   }
 
-
-
-
   rotateX(QUARTER_PI);
   rotateY(ma);
-
 
 for (let z = 0; z < height; z += w){
   for (let x = 0; x < width; x += w){
     push();
-
 
     let d = dist(x,z,width/2,height/2);
     let offset = map(d,0,maxD, -2, 2);
@@ -54,15 +49,3 @@ for (let z = 0; z < height; z += w){
 }
   angle += 0.1;
 }
-/*  if (r >= 255 || g >= 255 || b >= 255)
-  {
-    r -= 13;
-    g -= 0.5;
-    b -= 15;
-  }
-  else if (r < 255 || g < 255 || b < 255){
-    r += 13;
-    g += 0.5;
-    b += 15;
-  }
-  */
