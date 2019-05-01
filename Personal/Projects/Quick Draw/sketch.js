@@ -3,11 +3,24 @@ var scl = 20;
 var w = 600;
 var h = 600;
 
-
 function setup() {
   createCanvas(w,h,WEBGL);
   cols = w / scl;
   rows = h / scl;
+
+  var terrain = [[]];
+
+  var yoff = 0;
+  for (var y = -30; y < rows-1; y++){
+    var xoff = 0;
+    for (var x = -30; x < cols; x++){
+      //terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100);
+      xoff += 0.01;
+    }
+    yoff += 0.01;
+  }
+
+
   frameRate(30);
 }
 
@@ -35,4 +48,14 @@ function draw() {
     }
     endShape();
   }
+}
+
+function Create2DArray(rows) {
+  var arr = [];
+
+  for (var i=0;i<rows;i++) {
+     arr[i] = [];
+  }
+
+  return arr;
 }
