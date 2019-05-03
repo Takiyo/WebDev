@@ -1,50 +1,55 @@
 var cols, rows;
-var scl = 20;
-var w = 600;
-var h = 600;
+var scl = 15;
+var w = 800;
+var h = 700;
+var terrain;
+var flying = 0;
+
 
 function setup() {
   createCanvas(w,h,WEBGL);
-  cols = w / scl;
+  cols = w / scl*1.8;
   rows = h / scl;
-
-  var terrain = [[]];
-
-  var yoff = 0;
-  for (var y = -30; y < rows-1; y++){
-    var xoff = 0;
-    for (var x = -30; x < cols; x++){
-      //terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100);
-      xoff += 0.01;
-    }
-    yoff += 0.01;
-  }
-
-
   frameRate(30);
+
+  //determine array size
+  let arraySize = Math.round(max(rows,cols)) + 1;
+
+  //pre-fill array with dummy data
+  terrain = [...Array(arraySize)].map(e => Array(arraySize).fill(1));
+
 }
 
 function draw() {
   background(20);
   stroke(255);
   noFill();
-
-  translate(w/2,h/2);
   rotateX(PI/3);
-  translate(-w/2, -h/2);
+  translate(-w/1.2, -h/3);
 
-  for (var y = -30; y < rows; y++){
+  flying -= 0.1;
+  let yoff = flying;
+  let valley = -150;
+  let hill = 200;
+
+  //map array
+  for (let y = 0; y < rows; y++){
+    let xoff = 0;
+    for (let x = 0; x < cols; x++){
+      terrain[x][y] = map(noise(xoff, yoff), 0, 1, valley, hill);
+      xoff += 0.1;
+    }
+    yoff += 0.1;
+  }
+
+  for (let y = 0; y < rows; y++){
     beginShape(TRIANGLE_STRIP);
-    for (var x = -30; x < cols; x++){
-      //vertex(x*scl, y*scl);
-      //vertex((x+1)*scl, y*scl);
-      //vertex(x*scl, (y+1)*scl);
-      //vertex((x+1)*scl, (y+1)*scl);
-
-      vertex(x*scl, (y+1)*scl, random(-10, 10));
-      vertex((x+1)*scl, (y+1)*scl, random(-10, 10));
-      vertex((x+1)*scl, y*scl, random(-10, 10));
-      vertex(x*scl, (y+1)*scl, random(-10, 10));
+    for (let x = 0; x < cols; x++){
+      stroke(map(terrain[x][y], valley, hill, 0, 255), 0, 0);
+      vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
+      vertex((x+1)*scl, (y+1)*scl, terrain[x+1][y+1]);
+      vertex((x+1)*scl, y*scl, terrain[x+1][y]);
+      vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
     }
     endShape();
   }
