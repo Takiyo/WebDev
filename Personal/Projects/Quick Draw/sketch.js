@@ -1,28 +1,29 @@
 var cols, rows;
-var scl = 15;
+var scl = 20;
 var w = 800;
-var h = 700;
+var h = 1000;
 var terrain;
 var flying = 0;
-
+var test1;
+var test2;
 
 function setup() {
   createCanvas(w,h,WEBGL);
   cols = w / scl*1.8;
   rows = h / scl;
-  frameRate(30);
+  //frameRate(60);
+  textSize(30);
 
   //determine array size
   let arraySize = Math.round(max(rows,cols)) + 1;
 
   //pre-fill array with dummy data
   terrain = [...Array(arraySize)].map(e => Array(arraySize).fill(1));
-
 }
 
 function draw() {
-  background(20);
-  stroke(255);
+  //text(frameCount, width / 2, height / 2);
+  background(50);
   noFill();
   rotateX(PI/3);
   translate(-w/1.2, -h/3);
@@ -37,30 +38,22 @@ function draw() {
     let xoff = 0;
     for (let x = 0; x < cols; x++){
       terrain[x][y] = map(noise(xoff, yoff), 0, 1, valley, hill);
+      //test1 = terrain[x][y];
       xoff += 0.1;
     }
     yoff += 0.1;
   }
 
   for (let y = 0; y < rows; y++){
-    beginShape(TRIANGLE_STRIP);
     for (let x = 0; x < cols; x++){
-      stroke(map(terrain[x][y], valley, hill, 0, 255), 0, 0);
+      beginShape();
+      stroke(map(terrain[x][y], valley, hill, 0, 255));
       vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
       vertex((x+1)*scl, (y+1)*scl, terrain[x+1][y+1]);
       vertex((x+1)*scl, y*scl, terrain[x+1][y]);
-      vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
+      //vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
+      endShape(CLOSE);
+
     }
-    endShape();
   }
-}
-
-function Create2DArray(rows) {
-  var arr = [];
-
-  for (var i=0;i<rows;i++) {
-     arr[i] = [];
-  }
-
-  return arr;
 }
