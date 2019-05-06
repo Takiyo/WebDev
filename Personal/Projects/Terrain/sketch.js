@@ -9,6 +9,7 @@ var w = 600;
 var h = 600;
 var terrain;
 var flying = 0;
+var isLooping = true;
 var testButton;
 var test;
 
@@ -16,9 +17,10 @@ function setup() {
   createCanvas(w,h,WEBGL);
   cols = w / scl*1.5;
   rows = h / scl;
-  button = createButton('click me');
+  button = createButton('toggle loop');
   button.position(19, 19);
-  button.mousePressed(changeBG);
+  button.mousePressed(loopToggle);
+
   //frameRate(60);
   //textSize(30);
 
@@ -80,7 +82,12 @@ function draw() {
   }
 }
 
-function changeBG() {
-  var val = random(255);
-  background(val);
+function loopToggle() {
+  if (isLooping){
+    noLoop();
+    isLooping = false;
+  } else{
+    loop();
+    isLooping = true;
+  }
 }
