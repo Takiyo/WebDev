@@ -51,6 +51,16 @@ function draw() {
   rotateX(PI/3);
   translate(-w/1.2, -h/3);
 
+
+
+  if (!flattened){
+    drawTerrain();
+  }
+
+  ellipse(mouseX+200, mouseY-150, 20, 20);
+}
+
+function drawTerrain(){
   flying -= 0.1;
   let yoff = flying;
 
@@ -64,14 +74,6 @@ function draw() {
     yoff += 0.1;
   }
 
-  if (!flattened){
-    drawTerrain();
-  }
-
-  ellipse(mouseX+200, mouseY-150, 20, 20);
-}
-
-function drawTerrain(){
   for (let y = 0; y < rows; y++){
     for (let x = 0; x < cols; x++){
       beginShape();
