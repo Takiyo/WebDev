@@ -14,6 +14,7 @@ let valley = -175;
 let hill = 175;
 
 var isLooping = true;
+var toFlatten = false;
 var flattened = false;
 var loopBtn;
 var flattenBtn;
@@ -25,7 +26,7 @@ function setup() {
   cols = w / scl*1.5;
   rows = h / scl;
 
-  loopBtn = createButton('toggle loop');
+  loopBtn = createButton('pause');
   loopBtn.position(19, 19);
   loopBtn.mousePressed(loopToggle);
 
@@ -53,9 +54,9 @@ function draw() {
 
 
 
-  if (!flattened){
+  //if (!toFlatten){
     drawTerrain();
-  }
+  //}
 
   ellipse(mouseX+200, mouseY-150, 20, 20);
 }
@@ -88,10 +89,20 @@ function drawTerrain(){
     //  } else {
     //    stroke(192);
     //  }
-      stroke(map(terrain[x][y], valley, hill, 0, 255));
-      vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
-      vertex((x+1)*scl, (y+1)*scl, terrain[x+1][y+1]);
-      vertex((x+1)*scl, y*scl, terrain[x+1][y]);
+      if (!toFlatten){
+        stroke(map(terrain[x][y], valley, hill, 0, 255));
+        vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
+        vertex((x+1)*scl, (y+1)*scl, terrain[x+1][y+1]);
+        vertex((x+1)*scl, y*scl, terrain[x+1][y]);
+      } else if (!flattened){
+        //stroke(map(terrain[x][y], valley, hill, 0, 255));
+        stroke(map(0, valley, hill, 0, 255));
+        vertex(x*scl, (y+1)*scl);
+        vertex((x+1)*scl, (y+1)*scl);
+        vertex((x+1)*scl, y*scl);
+        flattened = true;
+      }
+
       //using (CLOSE) instead of drawing last connecting vertex
       //not sure if more/less efficient
       //vertex(x*scl, (y+1)*scl, terrain[x][y+1]);
@@ -109,24 +120,5 @@ function loopToggle() {
 }
 
 function flatten(){
-  noLoop(); isLooping = false;
-  //redraw();
-  background(bgColor);
-  clear();
-  clear();
-  clear();
-  if (!flattened){
-    for (let y = 0; y < rows; y++){
-      for (let x = 0; x < cols; x++){
-        beginShape();
-        stroke(map(0, valley, hill, 0, 255));
-        vertex(x*scl, (y+1)*scl, 0);
-        vertex((x+1)*scl, (y+1)*scl, 0);
-        vertex((x+1)*scl, y*scl, 0);
-        endShape(CLOSE);
-      }
-    }
-  }
-  flattened = true;
-  loop(); isLooping = true;
+  toFlatten = true;
 }
