@@ -72,7 +72,7 @@ function drawTerrain(){
       terrain[x][y] = map(noise(xoff, yoff), 0, 1, valley, hill);
       xoff += 0.1;
     }
-    yoff += 0.1;
+      yoff += 0.1;
   }
 
   for (let y = 0; y < rows; y++){
@@ -100,7 +100,7 @@ function drawTerrain(){
         vertex(x*scl, (y+1)*scl);
         vertex((x+1)*scl, (y+1)*scl);
         vertex((x+1)*scl, y*scl);
-        flattened = true;
+        //flattened = true;
       }
 
       //using (CLOSE) instead of drawing last connecting vertex
