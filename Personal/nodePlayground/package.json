@@ -1,0 +1,19 @@
+{
+  "name": "nodeplayground",
+  "version": "1.0.0",
+  "description": "This is something I'm using to learn node js and work with server side coding in general",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "data",
+    "test",
+    "learning"
+  ],
+  "author": "Takiyo Brytowski",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
