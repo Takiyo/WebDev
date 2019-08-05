@@ -1,3 +1,5 @@
 #!/user/bin/env python3
 
-print("hi za warudo")
+import requests
+url = "https://www.humblebundle.com/books/cloud-computing-books"
+r = requests.get(url)
