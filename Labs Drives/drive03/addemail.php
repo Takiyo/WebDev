@@ -31,6 +31,9 @@
     or die('Error querying database.');
 
   echo 'Customer added.';
+  echo '<br>';
+  echo 'Return to <a href="addemail.html">main page</a>';
+
 
   mysqli_close($dbc);
 ?>

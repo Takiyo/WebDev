@@ -19,7 +19,6 @@
 <?php
   #$dbc = mysqli_connect('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
   $dbc = mysqli_connect('localhost', 'root', '', 'tbrytowski')
-
     or die('Error connecting to MySQL server.');
 
   $email = $_POST['email'];
@@ -29,6 +28,8 @@
     or die('Error querying database.');
 
   echo 'Customer removed: ' . $email;
+  echo '<br>';
+  echo 'Return to <a href="addemail.html">main page</a>';
 
   mysqli_close($dbc);
 ?>

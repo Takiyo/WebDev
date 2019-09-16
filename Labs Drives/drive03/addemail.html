@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
 
   <meta content="text/html; charset=utf-8" />
@@ -15,17 +15,46 @@
 
 </head>
 <body>
-  <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
-  <img name="elvislogo" src="elvislogo.gif" width="229" height="32" border="0" alt="Make Me Elvis" />
-  <p>Enter your first name, last name, and email to be added to the <strong>Make Me Elvis</strong> mailing list.</p>
-  <form method="post" action="addemail.php">
-    <label for="firstname">First name:</label>
-    <input type="text" id="firstname" name="firstname" /><br />
-    <label for="lastname">Last name:</label>
-    <input type="text" id="lastname" name="lastname" /><br />
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" /><br />
-    <input type="submit" name="Submit" value="Submit" />
-  </form>
+  <div class="row" style="height:100%">
+    <div class="col-sm-4" style="background-color:#5C6D70;height:100%">
+        <img src="blankface.png"  alt="" style="float:right;transform:scaleX(-1);max-width:70%;height:auto" />
+    </div>
+      <div class="col-sm-4" style="background-color:#484A47; color:white;">
+        <h1 class="p-2">ADD ME TO THE LIST!</h1>
+        <p class="p-2" style="width:80%;">Enter your first name, last name, and email to be added to the <strong>Make Me Elvis</strong> mailing list.</p>
+        
+        <div class="input-group">
+          <form method="post" action="addemail.php">
+            <label for="firstname">First name:</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" /><br />
+            <label for="lastname">Last name:</label>
+            <input type="text" id="lastname" name="lastname" class="form-control"/><br />
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="form-control"/><br />
+            <input type="submit" name="Submit" value="Submit" class="form-control submit"/>            
+          </form>
+        </div>
+        <hr>
+
+        <div class="row-sm-4 p-5">    
+        </div>
+        
+        <h2 clas="p-2">Remove me from the list.</h2>
+        <p class="p-1">Enter the email you want removed from the mailing list.</p>
+        
+
+        <div class="input-group">
+            <form method="post" action="removeemail.php">
+              <label for="email">Email address:</label><br />
+              <input id="email" name="email" type="text" size="30" class="form-control"/><br />
+              <input type="submit" name="Remove" value="Remove" class="form-control"/>
+            </form>
+          </div>
+
+    </div>
+    <div class="col-sm-4" style="background-color:#5C6D70">
+        <img src="blankface.png"  alt="" style="float:left;max-width:70%;height:auto" />
+    </div>
+  </div>
 </body>
 </html>

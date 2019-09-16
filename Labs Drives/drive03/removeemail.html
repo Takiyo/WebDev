@@ -15,13 +15,24 @@
 
 </head>
 <body>
-  <img src="blankface.jpg" width="161" height="350" alt="" style="float:right" />
-  <img name="elvislogo" src="elvislogo.gif" width="229" height="32" border="0" alt="Make Me Elvis" />
-  <p>Enter an email address to remove.</p>
-  <form method="post" action="removeemail.php">
-    <label for="email">Email address:</label><br />
-    <input id="email" name="email" type="text" size="30" /><br />
-    <input type="submit" name="Remove" value="Remove" />
-  </form>
+    <div class="row" style="height:100%">
+      <div class="col-sm-4" style="background-color:#5C6D70;height:100%">
+          <img src="blankface.png"  alt="" style="float:right;transform:scaleX(-1);max-width:70%;height:auto" />
+      </div>
+      <div class="col-sm-4" style="background-color:#484A47; color:white;">
+
+    <p>Enter an email address to remove.</p>
+  <div class="input-group">
+    <form method="post" action="removeemail.php">
+      <label for="email">Email address:</label><br />
+      <input id="email" name="email" type="text" size="30" class="form-control"/><br />
+      <input type="submit" name="Remove" value="Remove" class="form-control"/>
+    </form>
+  </div>
+  </div>
+  <div class="col-sm-4" style="background-color:#5C6D70">
+      <img src="blankface.png"  alt="" style="float:left;max-width:70%;height:auto" />
+  </div>
+</div>
 </body>
 </html>
