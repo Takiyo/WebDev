@@ -17,10 +17,14 @@
 <body>
 
 <?php
-  #$dbc = mysqli_connect('softdev.mstclab.com', 'tbrytowski', 'tbrytowski', 'tbrytowski')
-  $dbc = mysqli_connect('localhost', 'root', '', 'tbrytowski')
+  require_once('connectvars.php');
+  $host = DB_HOST;
+  $db = DB_NAME;
+  $user = DB_USER;
+  $pass = DB_PASSWORD;
+  $charset = 'utf8mb4';
+  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
     or die('Error connecting to MySQL server.');
-
 
   $first_name = $_POST['firstname'];
   $last_name = $_POST['lastname'];
@@ -32,8 +36,7 @@
 
   echo 'Customer added.';
   echo '<br>';
-  echo 'Return to <a href="addemail.html">main page</a>';
-
+  echo 'Return to <a href="index.html">main page</a>';
 
   mysqli_close($dbc);
 ?>

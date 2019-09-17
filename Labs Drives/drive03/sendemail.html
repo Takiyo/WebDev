@@ -15,27 +15,34 @@
 
 </head>
 <body>
-    <div class="row" style="height:100%">
-      <div class="col-sm-4" style="background-color:#5C6D70;height:100%">
-          <img src="blankface.png"  alt="" style="float:right;transform:scaleX(-1);max-width:70%;height:auto" />
-      </div>
-      <div class="col-sm-4" style="background-color:#484A47; color:white;">
+  <div class="row" style="height:100%">
+    <div class="col-sm-4 outercols">
+        <img src="blankface.png"  alt="" style="float:right;transform:scaleX(-1);max-width:70%;height:auto" />
+    </div>
 
-    <p><strong>Private:</strong> For Elmer's use ONLY<br />
-  Write and send an email to mailing list members.</p>
-  <div class="input-group">
-    <form method="post" action="sendemail.php">
-      <label for="subject">Subject of email:</label><br />
-      <input id="subject" name="subject" type="text" size="30" class="form-control"/><br />
-      <label for="elvismail">Body of email:</label><br />
-      <textarea id="elvismail" name="elvismail" rows="8" cols="40"></textarea><br />
-      <input type="submit" name="Submit" value="Submit" />
-    </form>
+      <div class="col-sm-4" id="innercol">
+        
+        <p><strong>Private:</strong> For Elmer's use ONLY<br />
+          Write and send an email to mailing list members.</p>
+          <div class="input-group">
+            <form method="post" action="sendemail.php">
+              <label for="subject">Subject of email:</label><br />
+              <input id="subject" name="subject" type="text" size="30" class="form-control"/><br />
+              <label for="elvismail">Body of email:</label><br />
+              <textarea id="elvismail" name="elvismail" rows="8" cols="40"></textarea><br />
+              <input type="submit" name="Submit" value="Submit" />
+            </form>
+          </div>
+        <hr>
+
+        <div class="row-sm-4 p-5">    
+        </div>
+      
+    </div>
+    <div class="col-sm-4 outercols">
+        <img src="blankface.png"  alt="" style="float:left;max-width:70%;height:auto" />
+    </div>
   </div>
-  </div>
-  <div class="col-sm-4" style="background-color:#5C6D70">
-      <img src="blankface.png"  alt="" style="float:left;max-width:70%;height:auto" />
-  </div>
-</div>
 </body>
+
 </html>

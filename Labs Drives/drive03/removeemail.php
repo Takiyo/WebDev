@@ -17,8 +17,9 @@
 <body>
 
 <?php
+require_once('connectvars.php');
   #$dbc = mysqli_connect('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
-  $dbc = mysqli_connect('localhost', 'root', '', 'tbrytowski')
+  $dbc = mysqli_connect( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
     or die('Error connecting to MySQL server.');
 
   $email = $_POST['email'];
@@ -29,7 +30,7 @@
 
   echo 'Customer removed: ' . $email;
   echo '<br>';
-  echo 'Return to <a href="addemail.html">main page</a>';
+  echo 'Return to <a href="index.html">main page</a>';
 
   mysqli_close($dbc);
 ?>
