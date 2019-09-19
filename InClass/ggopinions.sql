@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2019 at 06:17 PM
+-- Generation Time: Sep 19, 2019 at 10:58 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -25,20 +25,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testtable`
+-- Table structure for table `ggopinions`
 --
 
-CREATE TABLE `testtable` (
-  `inty` int(10) NOT NULL,
-  `booly` tinyint(1) NOT NULL,
-  `floaty` float NOT NULL,
-  `datey` date NOT NULL,
-  `stringy` varchar(100) NOT NULL,
-  `filler1` int(5) NOT NULL,
-  `filler2` int(5) NOT NULL,
-  `filler3` int(5) NOT NULL,
-  `filler4` int(5) NOT NULL,
-  `filler5` int(5) NOT NULL
+CREATE TABLE `ggopinions` (
+  `playerId` int(11) NOT NULL,
+  `playerName` char(30) NOT NULL,
+  `charaterName` char(30) NOT NULL,
+  `datePlayerStarted` date NOT NULL,
+  `coolnessRating` tinyint(3) NOT NULL,
+  `password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -46,20 +42,20 @@ CREATE TABLE `testtable` (
 --
 
 --
--- Indexes for table `testtable`
+-- Indexes for table `ggopinions`
 --
-ALTER TABLE `testtable`
-  ADD PRIMARY KEY (`inty`);
+ALTER TABLE `ggopinions`
+  ADD PRIMARY KEY (`playerId`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `testtable`
+-- AUTO_INCREMENT for table `ggopinions`
 --
-ALTER TABLE `testtable`
-  MODIFY `inty` int(10) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `ggopinions`
+  MODIFY `playerId` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
