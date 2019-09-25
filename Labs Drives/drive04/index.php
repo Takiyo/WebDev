@@ -71,7 +71,7 @@
               <label for="lastname">Last name:</label>
               <input type="text" id="lastname" name="lastname" class="form-control" required/><br />
               <label for="email">Email:</label>
-              <input type="text" id="email" name="email" class="form-control" required/><br />
+              <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/><br />
               <input type="submit" name="submit" value="Submit" class="form-control submit"/>            
             </form>
           </div>
