@@ -1,4 +1,4 @@
-//onblur function that makes input require
+//onblur function
 function requiredField(input) {
     if (input.value.length < 1) {
         //red border
@@ -8,15 +8,15 @@ function requiredField(input) {
         console.log("this is an email type");
 
         if (input.value.indexOf("@") != -1 && input.value.indexOf(".") != -1) {
-            //green border, success
+            //green border
             input.style.borderColor = "#2ecc71";
         } else {
-            //red border, fail
+            //red border
             input.style.borderColor = "#e74c3c";
         }
 
     } else {
-        //green border, success
+        //green border
         input.style.borderColor = "#2ecc71";
     }
 }
