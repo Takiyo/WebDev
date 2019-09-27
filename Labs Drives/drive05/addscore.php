@@ -34,10 +34,10 @@
   <nav class="nav navbar-dark bg-dark justify-content-center">
   <a class="nav-link active" href="index.php">Top Scores</a>
   <a class="nav-link active" href="addscore.php">Submit Score</a>
+    <a class="nav-link active" <?php echo ($adminLoggedIn ? 
+    'href="logout.php">Logout' : 'href="login.php">Admin Login')?></a>
   <a class="nav-link <?php echo ($adminLoggedIn ? 
     'active' : 'disabled')?>" href="admin.php">Review Scores</a>
-  <a class="nav-link active" <?php echo ($adminLoggedIn ? 
-    'href="logout.php">Logout</a>' : 'href="login.php">Admin Login</a>')?>
 </nav>
 
 <div class="row">
@@ -46,8 +46,8 @@
     </div>
   </div>
   
-  <div class="col-sm innercol">
-    <h2>Guitar Wars - Add Your High Score</h2>
+  <div class="col-sm innercol container-fluid">
+    <h2>Add Your High Score</h2>
 
     <?php
       require_once('appvars.php');
@@ -89,7 +89,7 @@
                 mysqli_close($dbc);
               }
               else {
-                echo '<p class="error">Sorry, there was a problem uploading your screen shot image.</p>';
+                echo '<p class="error">Sorry, there was a problem uploading your screen.</p>';
               }
             }
           }
@@ -101,25 +101,23 @@
           @unlink($_FILES['screenshot']['tmp_name']);
         }
         else {
-          echo '<p class="error">Please enter all of the information to add your high score.</p>';
+          echo '<p class="error">Please enter all of the information and add a sreenshot to prove your high score!</p>';
         }
       }
     ?>
 
     <hr />
-    <div class="input-group">
       <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo GW_MAXFILESIZE; ?>" />
         <label for="name">Name:</label>
-        <input class="form-control" type="text" id="name" name="name" value="<?php if (!empty($name)) echo $name; ?>" /><br />
+        <input class="form-control" type="text" id="name" name="name" value="<?php if (!empty($name)) echo $name; ?>" required/><br />
         <label for="score">Score:</label>
-        <input class="form-contron" onkeypress="return isNumberKey(event)" onpaste="return false" type="text" id="score" name="score" value="" /><br />
+        <input class="form-control" onkeypress="return isNumberKey(event)" onpaste="return false" type="text" id="score" name="score" value="<?php if (!empty($score)) echo $score; ?>" required/><br />
         <label for="screenshot">Screen shot:</label>
-        <input class="form-contron" type="file" id="screenshot" name="screenshot" />
+        <input type="file" id="screenshot" name="screenshot" required/>
         <hr />
-        <input class="form-contron" type="submit" value="Add" name="submit" />
+        <button class="form-control" type="submit" name="submit">Add</button>
       </form>
-    </div>
 
   </div> <!-- innercol div -->
   <div class="col-sm outercol">

@@ -18,6 +18,8 @@
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $adminLoggedIn = false;
     
+    
+    // checks if admin is logged in for various purposes
     if (isset($_COOKIE['gwAdminLoggedIn'])){
       if ($_COOKIE['gwAdminLoggedIn'] == 'true')
       {
@@ -33,10 +35,10 @@
 <nav class="nav navbar-dark bg-dark justify-content-center">
   <a class="nav-link active" href="index.php">Top Scores</a>
   <a class="nav-link active" href="addscore.php">Submit Score</a>
+  <a class="nav-link active" <?php echo ($adminLoggedIn ? 
+    'href="logout.php">Logout' : 'href="login.php">Admin Login')?></a>
   <a class="nav-link <?php echo ($adminLoggedIn ? 
     'active' : 'disabled')?>" href="admin.php">Review Scores</a>
-  <a class="nav-link active" <?php echo ($adminLoggedIn ? 
-    'href="logout.php">Logout</a>' : 'href="login.php">Admin Login</a>')?>
 </nav>
 
 <div class="row">

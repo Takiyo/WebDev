@@ -8,8 +8,11 @@ body{
   background-color: #f0eea6;
 }
 
-.topscoreheader {
+h2{
+  text-align:center;
+}
 
+.topscoreheader {
   color: #FFFFFF;
   border: 2px inset #ff4c00;
   height: 200px;
@@ -60,7 +63,7 @@ table tr:nth-child(odd){
 }
 
 
-/* The sidebar menu */
+/* The sidebar */
 .sidenav {
     height: 100%; /*Full-height: remove this if you want "auto" height*/
     /*width: 160px; /* Set the width of the sidebar */
@@ -72,27 +75,8 @@ table tr:nth-child(odd){
    
 }
 
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ff4c00;
-    display: block;
-    background-color: rgba(200,200,200, 0.15);
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color:darkred;
-    text-decoration: none;
-
-}
 
 /* Style page content */
-.main {
-}
 .outercol{
   background-color:#f0eea6;
   width:auto;
