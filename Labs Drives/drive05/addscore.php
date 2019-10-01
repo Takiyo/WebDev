@@ -16,7 +16,6 @@
     require_once('appvars.php');
     require_once('connectvars.php');
   
-    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $adminLoggedIn = false;
     
     if (isset($_COOKIE['gwAdminLoggedIn'])){
@@ -56,8 +55,8 @@
       if (isset($_POST['submit'])) {
         // trims name and scores' white spaces
         // removes special characters
-        $name = mysqli_real_escape_string($dbc, trim($_POST['name'])); 
-        $score = mysqli_real_escape_string($dbc, trim($_POST['score']));
+        $name = $_POST['name']; 
+        $score = $_POST['score'];
         $screenshot = $_FILES['screenshot']['name'];
         $screenshot_type = $_FILES['screenshot']['type'];
         $screenshot_size = $_FILES['screenshot']['size']; 
@@ -71,17 +70,19 @@
               // move file to target directory  
               // if move successfull
               if (move_uploaded_file($_FILES['screenshot']['tmp_name'], $target)) {
-                $query = "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot')";
+                $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                $query = "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot', 0)";
+
                 mysqli_query($dbc, $query);
+
 
                 // TODO prettyfy confirmation and error messages
                 echo '<p>Thanks for adding your new high score! It will be reviewed and added to the high score list as soon as possible.</p>';
                 echo '<p><strong>Name:</strong> ' . $name . '<br />';
                 echo '<strong>Score:</strong> ' . $score . '<br />';
                 echo '<img src="' . GW_UPLOADPATH . $screenshot . '" alt="Score image" /></p>';
-                echo '<p><a href="index.php">&lt;&lt; Back to high scores</a></p>';
+                echo '<p><a href="index.php">&lt;&lt; Back to high scores</a> or add another.</p>';
 
-                // clear the score data to clear the form
                 $name = "";
                 $score = "";
                 $screenshot = "";

@@ -80,6 +80,7 @@ table tr:nth-child(odd){
 .outercol{
   background-color:#f0eea6;
   width:auto;
+  height:250em;
 }
 
 

@@ -1,37 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <title>Guitar Wars - High Scores Administration</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-  <div class="main">
+  </head>
 
+<?php 
+require_once('appvars.php');
+require_once('connectvars.php');
+
+$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$adminLoggedIn = false;
+
+
+// checks if admin is logged in for various purposes
+if (isset($_COOKIE['gwAdminLoggedIn'])){
+  if ($_COOKIE['gwAdminLoggedIn'] == 'true')
+  {
+    $adminLoggedIn = true;
+  }
+}
+
+?>
+<!-- Navbar. 
+  If admin logged in, enable admin.php link.
+  If admin logged in, change login to logout. -->
+  <nav class="nav navbar-dark bg-dark justify-content-center">
+    <a class="nav-link active" href="index.php">Top Scores</a>
+    <a class="nav-link active" href="addscore.php">Submit Score</a>
+    <a class="nav-link active" <?php echo ($adminLoggedIn ? 
+      'href="logout.php">Logout' : 'href="login.php">Admin Login')?></a>
+    <a class="nav-link <?php echo ($adminLoggedIn ? 
+      'active' : 'disabled')?>" href="admin.php">Review Scores</a>
+  </nav>
+
+<div class="row">
+
+  <div class="col-sm outercol">
+    <div class="sidenav">
+    </div>
+  </div>
+  <div class="col-sm innercol">
   <h2>Guitar Wars - High Scores Administration</h2>
   <p>Below is a list of all Guitar Wars high scores. Use this page to remove scores as needed.</p>
   <hr />
 
-  <!-- Side navigation -->
-  <div class="sidenav">
-    <a href="index.php">Top Scores</a>
-    <a href="admin.php">Admin</a>
-  </div>
 
+  <?php
 
-<?php
-  require_once('appvars.php');
-  require_once('connectvars.php');
-
-  // Connect to the database
-  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-  // Retrieve the score data from MySQL
   $query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
   $data = mysqli_query($dbc, $query);
 
-  // Loop through the array of score data, formatting it as HTML
   echo '<table>';
   while ($row = mysqli_fetch_array($data)) {
     // Display the score data
@@ -46,7 +73,14 @@
 
   mysqli_close($dbc);
 ?>
+
 </div>
+<div class="col-sm outercol">
+    <div class="sidenav">
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
