@@ -1,0 +1,91 @@
+.error {
+  font-weight: bold;
+  color: #FF0000;
+  border: 5px dotted red;
+}
+
+body{
+  background-color: #f0eea6;
+}
+
+h2{
+  text-align:center;
+}
+
+.topscoreheader {
+  color: #FFFFFF;
+  border: 2px inset #ff4c00;
+  height: 200px;
+}
+
+.imagecontainer{
+  position:relative;
+  text-align: left;
+}
+
+
+#textoverimage{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  font-size: 250%;
+  text-align:center;
+  transform: translate(-50%, -50%);
+}
+
+.topscoretable{
+  width: 70%;
+  float:left;
+  /* position:absolute; */
+}
+
+table tr:nth-child(odd){
+  background-color: #BEBC74;
+}
+
+.indexheader{
+  font-size:300%;
+  color:blue;
+}
+
+.score {
+  font-size:150%;
+  color: #36407F;
+}
+
+.scoreinfo {
+  vertical-align: top;
+  padding-right:15px;
+}
+
+#unverified{
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+/* The sidebar */
+.sidenav {
+    height: 100%; /*Full-height: remove this if you want "auto" height*/
+    /*width: 160px; /* Set the width of the sidebar */
+    /* position: fixed;  */
+    /* z-index: 1;  */
+    /* top: 0; 
+    left: 0; */
+    background-image: url("7clDhrb.jpg");
+   
+}
+
+
+/* Style page content */
+.outercol{
+  background-color:#f0eea6;
+  width:auto;
+  height:250em;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
