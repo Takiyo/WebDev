@@ -53,6 +53,26 @@
       require_once('connectvars.php');
 
       if (isset($_POST['submit'])) {
+        // set connectvars
+        $host = DB_HOST;
+        $db = DB_NAME;
+        $user = DB_USER;
+        $pass = DB_PASSWORD;
+        $charset = 'utf8mb4';
+        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+
+          // establish connection
+          try {
+            $pdo = new PDO($dsn, $user, $pass, $options);
+        } catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+        
         // trims name and scores' white spaces
         // removes special characters
         $name = $_POST['name']; 
@@ -70,10 +90,8 @@
               // move file to target directory  
               // if move successfull
               if (move_uploaded_file($_FILES['screenshot']['tmp_name'], $target)) {
-                $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-                $query = "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot', 0)";
-
-                mysqli_query($dbc, $query);
+                $stmt->prepare("INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot', 0)");
+                $stmt->execute([$name->name, $score->score, $screenshot->screenshot]);
 
 
                 // TODO prettyfy confirmation and error messages
@@ -87,7 +105,6 @@
                 $score = "";
                 $screenshot = "";
 
-                mysqli_close($dbc);
               }
               else {
                 echo '<p class="error">Sorry, there was a problem uploading your screen.</p>';

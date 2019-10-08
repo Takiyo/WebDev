@@ -59,23 +59,40 @@
       <?php
         
        // if (!isset($_SESSION['gwAdminId'])) { // session not yet set
-          if (isset($_POST['submit'])) { // submitted
-            $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            $admin_UN = mysqli_real_escape_string($dbc, trim($_POST['username']));
-            $admin_PW = mysqli_real_escape_string($dbc, trim($_POST['password']));
+          if (isset($_POST['submit'])) {
+            // set connectvars
+            $host = DB_HOST;
+            $db = DB_NAME;
+            $user = DB_USER;
+            $pass = DB_PASSWORD;
+            $charset = 'utf8mb4';
+            $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+            $options = [
+              PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+              PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+              PDO::ATTR_EMULATE_PREPARES => false,
+          ];
+
+            // Establish connection
+            try {
+              $pdo = new PDO($dsn, $user, $pass, $options);
+            } catch (\PDOException $e) {
+              throw new \PDOException($e->getMessage(), (int)$e->getCode());
+            }
+
+            $admin_UN = trim($_POST['username']);
+            $admin_PW = trim($_POST['password']);
             if (!empty($admin_UN) && !empty($admin_PW)) {
-              $query = "SELECT adminId, adminUN 
+              $stmt = $pdo->prepare("SELECT adminId, adminUN 
                 FROM globaladmin 
-                WHERE adminUN = '$admin_UN' AND adminPW = '$admin_PW'";
-              $data = mysqli_query($dbc, $query);
+                WHERE adminUN = '$admin_UN' AND adminPW = '$admin_PW'");
+              $stmt->execute();
                // or die("Error with query.");
 
               error_reporting(E_ERROR | E_PARSE); // prevents warnings from being shown
 
-              mysqli_close($dbc);
-
-              if (mysqli_num_rows($data) == 1) {
-                $row = mysqli_fetch_array($data);
+              if ($stmt->rowCount() == 1) {
+                foreach ($stmt as $row){
 
                 // sets session and cookies
                 // $_SESSION['gwAdminId'] = $row['adminId'];
@@ -89,6 +106,7 @@
                 
                 $home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/index.php';
                 header('Location: ' . $home_url); //redirect home
+                }
               }          
               else { // incorrect un/pass
                 $error_msg = 'Invalid username or password.';

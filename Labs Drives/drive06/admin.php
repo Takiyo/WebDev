@@ -17,17 +17,32 @@
 require_once('appvars.php');
 require_once('connectvars.php');
 
-$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 $adminLoggedIn = false;
+
+// set connectvars
+$host = DB_HOST;
+$db = DB_NAME;
+$user = DB_USER;
+$pass = DB_PASSWORD;
+$charset = 'utf8mb4';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+
+  // establish connection
+  try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
 
 
 // checks if admin is logged in for various purposes
-if (isset($_COOKIE['gwAdminLoggedIn'])){
-  if ($_COOKIE['gwAdminLoggedIn'] == 'true')
-  {
-    $adminLoggedIn = true;
-  }
-}
+require_once('phpvalidation/checkLogin.php');
+
 
 ?>
 <!-- Navbar. 
@@ -56,11 +71,11 @@ if (isset($_COOKIE['gwAdminLoggedIn'])){
 
   <?php
 
-  $query = "SELECT * FROM guitarwars ORDER BY score DESC, date ASC";
-  $data = mysqli_query($dbc, $query);
+  $stmt = $pdo->prepare("SELECT * FROM guitarwars ORDER BY score DESC, date ASC");
+  $stmt->execute();
 
   echo '<table>';
-  while ($row = mysqli_fetch_array($data)) {
+  foreach ($stmt as $row) {
     // Display the score data
     echo '<tr class="scorerow"><td><strong>' . $row['name'] . '</strong></td>';
     echo '<td>' . $row['date'] . '</td>';
@@ -71,7 +86,6 @@ if (isset($_COOKIE['gwAdminLoggedIn'])){
   }
   echo '</table>';
 
-  mysqli_close($dbc);
 ?>
 
 </div>

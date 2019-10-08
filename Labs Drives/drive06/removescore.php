@@ -36,13 +36,29 @@
       // Delete the screen shot image file from the server
       @unlink(GW_UPLOADPATH . $screenshot);
 
-      // Connect to the database
-      $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); 
+      // set connectvars
+      $host = DB_HOST;
+      $db = DB_NAME;
+      $user = DB_USER;
+      $pass = DB_PASSWORD;
+      $charset = 'utf8mb4';
+      $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+      $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES => false,
+    ];
+
+      // Establish connection
+      try {
+        $pdo = new PDO($dsn, $user, $pass, $options);
+      } catch (\PDOException $e) {
+        throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    }
 
       // Delete the score data from the database
-      $query = "DELETE FROM guitarwars WHERE id = $id LIMIT 1";
-      mysqli_query($dbc, $query);
-      mysqli_close($dbc);
+      $stmt = $pdo->prepare("DELETE FROM guitarwars WHERE id = $id LIMIT 1");
+      $stmt->execute();
 
       // Confirm success with the user
       echo '<p>The high score of ' . $score . ' for ' . $name . ' was successfully removed.';
