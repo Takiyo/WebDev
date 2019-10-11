@@ -113,7 +113,6 @@
     // Grab the profile data from the database
     $stmt = $pdo->prepare("SELECT first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_SESSION['user_id'] . "'");
     $stmt->execute();
-    $row = mysqli_fetch_array($data);
 
     //if ($row != NULL) {
     if ($stmt->rowCount() != 0) {
