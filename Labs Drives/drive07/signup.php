@@ -3,8 +3,6 @@
   $page_title = 'Sign Up';
   require_once('header.php');
 
-  require_once('appvars.php');
-  require_once('connectvars.php');
 
   // set connectvars
   $host = DB_HOST;
@@ -25,7 +23,12 @@
   } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
   }
-
+  ?>
+<div class="row">
+  <div class="col-sm">
+  </div>
+  <div class="col-sm">
+<?php
   if (isset($_POST['submit'])) {
     // Grab the profile data from the POST
     $username = trim($_POST['username']);
@@ -60,19 +63,24 @@
 ?>
 
   <p>Please enter your username and desired password to sign up to Mismatch.</p>
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <fieldset>
+  <div class="form-group">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
       <legend>Registration Info</legend>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" value="<?php if (!empty($username)) echo $username; ?>" /><br />
+      <input class="form-control" type="text" id="username" name="username" value="<?php if (!empty($username)) echo $username; ?>" /><br />
       <label for="password1">Password:</label>
-      <input type="password" id="password1" name="password1" /><br />
+      <input class="form-control" type="password" id="password1" name="password1" /><br />
       <label for="password2">Password (retype):</label>
-      <input type="password" id="password2" name="password2" /><br />
-    </fieldset>
-    <input type="submit" value="Sign Up" name="submit" />
-  </form>
+      <input class="form-control" type="password" id="password2" name="password2" /><br />
 
+      <input class="btn btn-primary" type="submit" value="Sign Up" name="submit" />
+    </form>
+</div>
+</div> <!--midcol-->
+<div class="col-sm">
+</div>
+</div> <!--row-->
 <?php
   // Insert the page footer
   require_once('footer.php');

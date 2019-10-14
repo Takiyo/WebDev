@@ -1,15 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+
+
 <?php
-  // Generate the navigation menu
-  echo '<hr />';
-  if (isset($_SESSION['username'])) {
-    echo '<a href="index.php">Home</a> &#10084; ';
-    echo '<a href="viewprofile.php">View Profile</a> &#10084; ';
-    echo '<a href="editprofile.php">Edit Profile</a> &#10084; ';
-    echo '<a href="logout.php">Log Out (' . $_SESSION['username'] . ')</a>';
-  }
-  else {
-    echo '<a href="login.php">Log In</a> &#10084; ';
-    echo '<a href="signup.php">Sign Up</a>';
-  }
-  echo '<hr />';
+if (isset($_SESSION['username'])) {
+  echo '<a class="nav-item nav-link" href="viewprofile.php">View Profile</a>';
+  echo '<a class="nav-item nav-link" href="editprofile.php">Edit Profile</a>';
+  echo '<a class="nav-item nav-link" href="logout.php"> Log Out (' . $_SESSION['username'] . ')</a>';
+
+}
+else {
+  echo '<a class="nav-item nav-link" href="login.php">Log In</a> ';
+  echo '<a class="nav-item nav-link" href="signup.php">Sign Up</a>';
+}
+echo '<hr />';
 ?>
+
+</div>
+  </div>
+</nav>

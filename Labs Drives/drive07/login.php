@@ -1,8 +1,9 @@
 <?php
-  require_once('connectvars.php');
 
   // Start the session
   session_start();
+
+  require_once('header.php');
 
   // Clear the error message
   $error_msg = "";
@@ -62,26 +63,29 @@
     }
   }
 
-  // Insert the page header
-  $page_title = 'Log In';
-  require_once('header.php');
+?>
+<div class="row">
+  <div class="col-sm">
+  </div>
 
-  // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
+<div class="col-sm">
+<?php
+// If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
   if (empty($_SESSION['user_id'])) {
     echo '<p class="error">' . $error_msg . '</p>';
 ?>
+<div class="form-group">
+
 
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <fieldset>
-      <legend>Log In</legend>
-      <label for="username">Username:</label>
-      <input type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
-      <label for="password">Password:</label>
-      <input type="password" name="password" />
-    </fieldset>
-    <input type="submit" value="Log In" name="submit" />
+    <legend>Log In</legend>
+    <input class="form-control" placeholder="Username" type="text" name="username" value="<?php if (!empty($user_username)) echo $user_username; ?>" /><br />
+    <input class="form-control" placeholder="Password" type="password" name="password" />
+    <br>
+    <input class="btn btn-primary" type="submit" value="Log In" name="submit" />
   </form>
-
+  </div> <!--formgroup-->
+  </div><!--midcol-->
 <?php
   }
   else {
@@ -89,7 +93,9 @@
     echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
   }
 ?>
-
+  <div class="col-sm">
+  </div>
+</div> <!--row-->
 <?php
   // Insert the page footer
   require_once('footer.php');

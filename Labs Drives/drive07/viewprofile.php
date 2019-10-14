@@ -6,8 +6,6 @@
   $page_title = 'View Profile';
   require_once('header.php');
 
-  require_once('appvars.php');
-  require_once('connectvars.php');
 
   // Make sure the user is logged in before going any further.
   if (!isset($_SESSION['user_id'])) {
@@ -16,7 +14,6 @@
   }
 
   // Show the navigation menu
-  require_once('navmenu.php');
 
   // set connectvars
   $host = DB_HOST;
@@ -48,6 +45,16 @@
     $stmt->execute();
   }
 
+
+  ?>
+  <div class="row">
+  <div class="col-sm">
+  </div>    
+  <div class="col-sm">
+    
+
+
+  <?php
   if ($stmt->rowCount() == 1) {
     foreach ($stmt as $row){
       // The user row was found so display the user data
@@ -101,8 +108,12 @@
   else {
     echo '<p class="error">There was a problem accessing your profile.</p>';
   }
-?>
-
+?>    
+</div>
+    <div class="col-sm">
+    
+    </div>  
+  </div>
 <?php
   // Insert the page footer
   require_once('footer.php');
