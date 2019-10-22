@@ -42,4 +42,16 @@ img{
 }
 body{
   background-color:#5A1838;
+  color:#efbe93;
+}
+a{
+  text-decoration: underline;
+  color:#efbe93;
+}
+a:hover{
+  text-decoration:none;
+  color:#c9806a;
+}
+.navbar a{
+  text-decoration:none;
 }

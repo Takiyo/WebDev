@@ -118,11 +118,11 @@
     //if ($row != NULL) {
     if ($stmt->rowCount() != 0) {
       foreach ($stmt as $row){
-        $first_name = $row['first_name'];
-        $last_name = $row['last_name'];
+        $first_name = preg_replace('/[^A-Za-z0-9 ]/', '', $row['first_name']);
+        $last_name = preg_replace('/[^A-Za-z0-9 ]/', '', $row['last_name']);
         $gender = $row['gender'];
         $birthdate = $row['birthdate'];
-        $city = $row['city'];
+        $city = preg_replace('/[^A-Za-z0-9 ]/', '', $row['city']);
         $state = $row['state'];
         $old_picture = $row['picture'];
       }
@@ -137,20 +137,74 @@
       <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MM_MAXFILESIZE; ?>" />
         <legend>Personal Information</legend>
         <label for="firstname">First name:</label>
-        <input class="form-control" type="text" id="firstname" name="firstname" value="<?php if (!empty($first_name)) echo $first_name; ?>" /><br />
+        <input class="form-control" type="text" id="firstname" name="firstname" value="<?php if (!empty($first_name)) echo $first_name; ?>" required/><br />
         <label for="lastname">Last name:</label>
-        <input class="form-control" type="text" id="lastname" name="lastname" value="<?php if (!empty($last_name)) echo $last_name; ?>" /><br />
+        <input class="form-control" type="text" id="lastname" name="lastname" value="<?php if (!empty($last_name)) echo $last_name; ?>" required/><br />
         <label for="gender">Gender:</label>
         <select class="custom-select" id="gender" name="gender">
           <option value="M" <?php if (!empty($gender) && $gender == 'M') echo 'selected = "selected"'; ?>>Male</option>
           <option value="F" <?php if (!empty($gender) && $gender == 'F') echo 'selected = "selected"'; ?>>Female</option>
         </select><br><br>
         <label for="birthdate">Birthdate:</label>
-        <input class="form-control" type="text" id="birthdate" name="birthdate" value="<?php if (!empty($birthdate)) echo $birthdate; else echo 'YYYY-MM-DD'; ?>" /><br />
+        <input class="form-control" type="date" id="birthdate" name="birthdate" value="<?php if (!empty($birthdate)) echo $birthdate; else echo 'YYYY-MM-DD'; ?>" /><br />
         <label for="city">City:</label>
-        <input class="form-control" type="text" id="city" name="city" value="<?php if (!empty($city)) echo $city; ?>" /><br />
+        <input class="form-control" type="text" id="city" name="city" value="<?php if (!empty($city)) echo $city; ?>" required/><br />
         <label for="state">State:</label>
-        <input class="form-control" type="text" id="state" name="state" value="<?php if (!empty($state)) echo $state; ?>" /><br />
+        <select class="form-control" id="state" name="state">
+          <option value="">N/A</option>
+          <option value="AK">Alaska</option>
+          <option value="AL">Alabama</option>
+          <option value="AR">Arkansas</option>
+          <option value="AZ">Arizona</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DC">District of Columbia</option>
+          <option value="DE">Delaware</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="IA">Iowa</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MD">Maryland</option>
+          <option value="ME">Maine</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MO">Missouri</option>
+          <option value="MS">Mississippi</option>
+          <option value="MT">Montana</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="NE">Nebraska</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NV">Nevada</option>
+          <option value="NY">New York</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VA">Virginia</option>
+          <option value="VT">Vermont</option>
+          <option value="WA">Washington</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WV">West Virginia</option>
+          <option value="WY">Wyoming</option>
+        </select>        
         <input type="hidden" name="old_picture" value="<?php if (!empty($old_picture)) echo $old_picture; ?>" />
         <label for="new_picture">Picture:</label>
         <input type="file" id="new_picture" name="new_picture" />

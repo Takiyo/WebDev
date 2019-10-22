@@ -30,8 +30,7 @@
   <div class="col-sm">
 <?php
   if (isset($_POST['submit'])) {
-    // Grab the profile data from the POST
-    $username = trim($_POST['username']);
+    $username = preg_replace('/[^A-Za-z0-9]/', '', trim($_POST['username']));
     $password1 = trim($_POST['password1']);
     $password2 = trim($_POST['password2']);
 
