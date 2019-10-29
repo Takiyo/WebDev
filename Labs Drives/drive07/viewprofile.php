@@ -36,14 +36,11 @@
   }
 
   // Grab the profile data from the database
-  if (!isset($_GET['user_id'])) {
-    $stmt = $pdo->prepare("SELECT username, first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_SESSION['user_id'] . "'");
+  if (!isset($_GET['hwId'])) {
+    $stmt = $pdo->prepare("SELECT first_name, last_name, gender, birthdate, weight, username FROM exercise_user WHERE id = '" . $_COOKIE['hwId'] . "'");
     $stmt->execute();
   }
-  else {
-    $stmt = $pdo->prepare("SELECT username, first_name, last_name, gender, birthdate, city, state, picture FROM mismatch_user WHERE user_id = '" . $_GET['user_id'] . "'");
-    $stmt->execute();
-  }
+
 
 
   ?>

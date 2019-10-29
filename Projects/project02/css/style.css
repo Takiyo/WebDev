@@ -1,0 +1,34 @@
+#calc{
+    width:100px;
+    margin-left:0px;
+}
+
+#titleheader{
+    background-color: rgba(0, 0, 0, 0.6);
+    display:block;
+    width:500em;
+}
+
+.calorieoutput{
+    font-size: 2em;
+}
+
+.error{
+    color:red;
+}
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/bg.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+#session{
+    background-color:lightgray;
+}

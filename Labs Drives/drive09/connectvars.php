@@ -1,5 +1,5 @@
 <?php
-//Softdev
+// Softdev
 // define('DB_HOST', 'softdev.mstclab.com');
 // define('DB_USER', 'tbrytowski');
 // define('DB_PASSWORD', 'bxc74p5yaj');
