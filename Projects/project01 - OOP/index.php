@@ -1,7 +1,7 @@
 <?php
 require_once('pagecomponents/header.php');
 require_once('pagecomponents/main.php');
-require_once('pagecomponents/footer.php');
+//require_once('pagecomponents/footer.php');
 
 ?>
 <!--

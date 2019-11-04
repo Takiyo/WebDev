@@ -1,23 +1,4 @@
 
-<!--
-  
-Project is client-deliverable although a bit spartan.  
-
-validation of fields needs to be next to the field itself.
-
-validation does not preclude special characters or numbers.  Need to list madlbs from newest to oldest.
-
-﻿folder structure should include the following:  css, js, images, etc..  Javascript validation function exists,but is not used. 
-
-missing sql for project for me to recreate db.
-
-madlibs should be in the opposite order as you have them.  
-
-index does a ton of the heavy lifting here.  You have a nice object-oriented structure in places.
-
-
-
--->
 <?php
 $component = new main();
 $component->createPage();
@@ -53,24 +34,20 @@ class main{
             <div class="w3-card-4 w3-margin w3-white">
                 <div class="w3-container">
                     <h3><b>Don't know how to play Mad-Libs?</b></h3>
-                </div>
-
-                <div class="w3-container">
-
                     <p>Mad libs are a simple game where you create a story template with blanks for words. You, or
                         another player, then construct a list of words and place them into the story, creating an often
                         silly or funny story as a result.</p>
 
 
-                    <div class="w3-row">
-                        <div class="w3-col m8 s12">
-                        </div>
-                        <div class="w3-col m4 w3-hide-small">
-                        </div>
-                    </div>
+                </div>
+
+                <div class="w3-container">
+
+
+
                 </div>
             </div>
-            <hr>
+
 
         </div>
 
@@ -154,13 +131,13 @@ class main{
                         <form action="<?php echo $_SERVER['PHP_SELF'] . "#focushere" ?>" method="post"
                               enctype="multipart/form-data">
                             <legend>Enter a noun:</legend>
-                            <input type="text" name="noun"/><br><br>
+                            <input type="text" name="noun" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"/><br><br>
                             <legend>Enter a verb:</legend>
-                            <input type="text" name="verb"/><br><br>
+                            <input type="text" name="verb" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"/><br><br>
                             <legend>Enter an adjective:</legend>
-                            <input type="text" name="adjective"/><br><br>
+                            <input type="text" name="adjective" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"/><br><br>
                             <legend>Enter an adverb:</legend>
-                            <input type="text" name="adverb"/><br><br>
+                            <input type="text" name="adverb" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"/><br><br>
 
 
                             <input type="submit" value="Generate Story" name="submit" style="margin-bottom:50px"/>
@@ -175,33 +152,8 @@ class main{
                 </div>
             </div>
 
-            <!-- Labels / tags -->
-            <div class="w3-card w3-margin" style="float:right; width=20%;">
-                <div class="w3-container w3-padding">
-                    <h4>Need Word Suggestions? Try:</h4>
-                </div>
-                <div class="w3-container w3-white">
-                    <p>
-                        <span class="w3-tag w3-black w3-margin-bottom">neat</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">huge</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">undulate</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">gravitate</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">otter</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">boy</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">purplish-black</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">electrifying</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">bottle</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">grotesque</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">cry</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">tipsy</span>
-                        <span class="w3-tag w3-black w3-margin-bottom">gone</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">hot minute</span>
+            <?php require_once('pagecomponents/footer.php');?>
 
-                    </p>
-                </div>
-            </div>
-
-            <!-- END Introduction Menu -->
         </div>
 
         <!-- END GRID -->
@@ -213,7 +165,6 @@ class main{
     <!-- END w3-content -->
 </div>
 
-</footer>
 
 </body>
 

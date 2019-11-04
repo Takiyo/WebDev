@@ -21,7 +21,7 @@ function requiredField(input) {
     }
 }
 
-//checks if keypress is number and only allows it
+//only allows numbers
 function isNumberKey(evt)
     {
         var charCode = (evt.which) ? evt.which : event.keyCode
@@ -30,3 +30,18 @@ function isNumberKey(evt)
 
         return true;
     }
+
+// prevents numbers and by extension special characters
+// TODO: prevent users from pasting them in
+function preventNumberInput(e){
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+    if (keyCode > 47 && keyCode < 58 || keyCode > 95 && keyCode < 107 ){
+        e.preventDefault();
+    }
+}
+
+$(document).ready(function(){
+    $('#text_field').keypress(function(e) {
+        preventNumberInput(e);
+    });
+})

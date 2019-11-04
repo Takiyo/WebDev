@@ -45,7 +45,7 @@ width:9%;
 }
 
 input[type=submit] {
-  width: 10%;
+
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -67,4 +67,12 @@ div {
 image{position:absolute;}
 html{
     background-color: bisque;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
