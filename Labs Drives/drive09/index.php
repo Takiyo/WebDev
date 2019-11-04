@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <script src="jsvalidation.js"></script>
   </head>
 <body>  
   <div id="imgcontainer">
@@ -24,7 +26,7 @@
   <h3>Risky Jobs - Search</h3>
   <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="usersearch">Find your risky job:</label><br />
-    <input type="text" id="usersearch" name="usersearch" /><br /><br><br>
+    <input type="text" id="usersearch" name="usersearch" onkeypress="return blockSpecialChar(event)"/><br /><br><br>
     <input type="submit" name="submit" value="Submit" />
   </form>
   </div>
@@ -56,7 +58,9 @@
 
     // Establish connection
         $pdo = new PDO($dsn, $user, $pass, $options);
-          require_once('search.php');
+          if (isset($_GET["submit"])){
+            require_once('search.php');
+          }
         ?>
       </div>
       <div class="col-sm">
