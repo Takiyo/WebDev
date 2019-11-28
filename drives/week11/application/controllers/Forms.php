@@ -8,7 +8,7 @@ class Forms extends CI_Controller {
                 $this->load->model('product_model');
                 //$this->load->model('tools_model');
                 //$this->load->model('electronics_model');
-                $this->load->helper('url_helper');
+                $this->load->helper('url_helper'); //helps 
         }
 
         // Sets title and calls the view's get_product method that displays product 
