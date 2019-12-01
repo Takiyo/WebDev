@@ -14,8 +14,11 @@
         
         <!-- My own JS/CSS -->
         <script type='text/javascript' src="<?php echo base_url(); ?>js/displayfunctions.js"></script>
+        <script type='text/javascript' src="<?php echo base_url(); ?>js/clientvalidation.js"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/generalstyles.css">
 
 </head>
 <body>
-        
+
+<!-- Begin container that has BG elements -->
+<div class="position-absolute w-100 h-100" style="background-color: rgba(255,0,0,0.1);">

@@ -1,11 +1,11 @@
 
-<div class="position-absolute w-100 h-100" style="background-color: rgba(255,0,0,0.1);">
-    <div class="row align-items-center h-100 m-3">
+    <div class="row align-items-center h-100 m-3"> <!-- start 3 col layout -->
         <div class="col-sm"></div>
-        <div class="col-sm card card-block mx-auto h-50 myCard">
-            <div class="mx-1 my-1 ">
+        <div class="col-sm card card-block mx-auto h-75 myCard">
+            <div class="mx-1 my-1">
                 <?php echo validation_errors(); ?>
 
+                <!-- Form controller, create() method -->
                 <?php echo form_open('forms/create'); ?>
 
                 <div class="form-group formSelector">
@@ -18,42 +18,53 @@
                 </div>
             </div> <!-- centered div -->
 
+            <!-- TODO -->
                 
-            <div class=" my-auto">
-                <div id='toolsForm' style="display:none;">
-                    <div class="form-group">
-                    <label for="Test2"></label>
-                    <input type="text" name="test2" id="" class="form-control" placeholder="placehold" >
-                    <small id="helpId" class="text-muted">Tools</small>
+            <div class="my-auto">
+                <div id='toolsForm' style="display:none;" class="form-group">
+                    <div class="text-center py-4"><img src="<?php echo base_url() ?>/images/screwdriverIcon.png" class="formIcon"/></div>
+                    <input type="text" name="toolsName" id="" class="form-control toolsInput" >
+                    <small id="helpId" class="text-muted">Name</small>
                     <br>
                     <br>
-                    <input type="text" name="test2" id="" class="form-control" placeholder="placehold" >
-                    <small id="helpId" class="text-muted">Tools</small>
+                    <select name="toolsShipper" class="form-control toolsInput">
+                        <option disabled selected value> -- select a shipper -- </option>
+                        <option>FedEx</option>
+                        <option>UPS</option>
+                        <option>USPS</option>
+                        <option>Other</option>
+                    </select> 
+                    <small id="helpId" class="text-muted">Shipper</small>
                     <br>
                     <br>
-                    <input type="text" name="test2" id="" class="form-control" placeholder="placehold" >
-                    <small id="helpId" class="text-muted">Tools</small>
+                    <input type="number" min='0' onkeypress="return isNumberKey(event)" name="toolsWeight" id="Weight?" class="form-control toolsInput" >
+                    <small id="helpId" class="text-muted">Weight (ounces)</small>
                     <br>
                     <br>
-                    <input type="text" name="test2" id="" class="form-control" placeholder="placehold" >
-                    <small id="helpId" class="text-muted">Tools</small>
-                    </div>
+                    <button type="submit" class="btn btn btn-outline-success btn-block">Submit</button>
                 </div>
                 
-                <div id='electronicsForm' style="display:none;">
-                    <div class="form-group">
-                        <label for="Test3"></label>
-                        <input type="text" name="test3" id="" class="form-control" placeholder="placehold" >
-                        <small id="helpId" class="text-muted">Electronics</small>
-                    </div>
+                <div class="form-group" id='electronicsForm' style="display:none;">
+                    <div class="text-center py-4"><img src="<?php echo base_url() ?>/images/computerchipIcon.png" class="formIcon"/></div>
+                    <input type="text" name="electronicsName" id="" class="form-control electronicsInput" >
+                    <small id="helpId" class="text-muted">Name</small>
+                    <br>
+                    <br>                        
+                    <select name="electronicsRecyclable" class="form-control electronicsInput">
+                        <option [ngvalue]="true">Yes</option>
+                        <option [ngvalue]="false">No</option>
+                    </select> 
+                    <small id="helpId" class="text-muted">Is it Recyclable?</small>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-outline-success btn-block">Submit</button>
                 </div>
-                <button type="submit" class="btn btn-primary my-1">Submit</button>
                 </form>
-                </div> <!-- centered div -->
+            </div> <!-- centered div -->
 
         </div> <!-- col -->
+
         <div class="col-sm"></div>
         
     </div> <!-- row -->
     
-</div> <!-- container -->

@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//TODO switch to softdev
-$config['base_url'] = '';
+//TODO switch to softdev ex: http://softdev.mstclab.com/tbrytowski/Labs%20Drives/week11/
+$config['base_url'] = 'http://softdev.mstclab.com/tbrytowski/Labs%20Drives/week11/';
 
 /*
 |--------------------------------------------------------------------------

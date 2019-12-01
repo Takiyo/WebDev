@@ -70,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-//TODO change to 'softdev'
-$active_group = 'default';
+//TODO change active_group to 'softdev'
+$active_group = 'softdev';
 $query_builder = TRUE;
 
 $db['default'] = array(

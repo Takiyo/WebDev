@@ -1,5 +1,10 @@
-.formSelector{
-}
+/* .formSelector{
+} */
 .myCard{
     overflow: auto;
+    padding:1.5em;
+}
+.formIcon{
+    max-width:5em;
+    height:auto;
 }

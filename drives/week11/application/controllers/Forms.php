@@ -6,8 +6,8 @@ class Forms extends CI_Controller {
         {
                 parent::__construct();
                 $this->load->model('product_model');
-                //$this->load->model('tools_model');
-                //$this->load->model('electronics_model');
+                // $this->load->model('tools_model');
+                // $this->load->model('electronics_model');
                 $this->load->helper('url_helper'); //helps 
         }
 
@@ -40,18 +40,22 @@ class Forms extends CI_Controller {
                 $this->load->view('templates/footer');
         }
 
-        // Creates form
+        // Creates form and validates data.
         //TODO add parameters for product types
         public function create()
         {
             $this->load->helper('form');
             $this->load->library('form_validation');
         
-            $data['title'] = 'Create a product item';
+            $data['title'] = 'Submit a Product';
         
-            $this->form_validation->set_rules('test2', 'Test2', 'required');
-            $this->form_validation->set_rules('test3', 'Test3', 'required');
-            $this->form_validation->set_rules('test4', 'Test4', 'required');
+            // Params: input name attribute, human name for error display, validation rules sepparated by |. Can use any
+            $this->form_validation->set_rules('toolsName', "Tool's name", 'is_string|max_length[50]');
+            $this->form_validation->set_rules('toolsShipper', "Shipper", 'is_string|max_length[10]');
+            $this->form_validation->set_rules('toolsWeight', "Weight", 'is_numeric');
+
+            $this->form_validation->set_rules('electronicsName', "Electronics name", 'max_length[50]');
+            $this->form_validation->set_rules('electronicsRecyclable', "Recylable", "trim");
         
             // Check if form submitted and did not pass validation
             if ($this->form_validation->run() === FALSE)
@@ -65,7 +69,10 @@ class Forms extends CI_Controller {
             else
             {
                 $this->product_model->set_product();
+
+                $this->load->view('templates/header', $data);
                 $this->load->view('forms/success');
+                $this->load->view('templates/footer');
             }
         }
 }
