@@ -7,6 +7,7 @@ class News extends CI_Controller {
                 parent::__construct();
                 $this->load->model('news_model');
                 $this->load->helper('url_helper');
+                $this->load->library('common');
         }
 
         // Sets title and calls the view's get_news method that displays news 

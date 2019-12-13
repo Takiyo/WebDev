@@ -1,6 +1,6 @@
-</div> <!-- container -->
-
-<!-- <br> -->
+<br>
 footer
-        </body>
-</html> -->
+<!--</div>  container -->
+
+</body>
+</html> 

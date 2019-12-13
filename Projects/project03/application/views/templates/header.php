@@ -12,13 +12,47 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>     
         
-        <!-- My own JS/CSS -->
+        <!-- My own links -->
         <script type='text/javascript' src="<?php echo base_url(); ?>js/displayfunctions.js"></script>
         <script type='text/javascript' src="<?php echo base_url(); ?>js/clientvalidation.js"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/generalstyles.css">
+
+        <!-- CSS Template Links-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>templatecss/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>templatecss/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>templatecss/owl.theme.default.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>templatecss/style.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>templatecss/responsive.css">
 
 </head>
 <body>
 
 <!-- Begin container that has BG elements -->
-<div class="position-absolute w-100 h-100" style="background-color: rgba(255,0,0,0.1);">
+<!-- <div class="position-absolute w-100 h-100" style="background-color: rgba(255,0,0,0.1);"> -->
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <h2><a href="#">Classic</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="menu">
+                            <ul>
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">lifestyle</a></li>
+                                <li><a href="#">Food</a></li>
+                                <li><a href="#">Nature</a></li>
+                                <li><a href="#">photography</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
