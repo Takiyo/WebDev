@@ -7,7 +7,6 @@ class News extends CI_Controller {
                 parent::__construct();
                 $this->load->model('news_model');
                 $this->load->helper('url_helper');
-                $this->load->library('common');
         }
 
         // Sets title and calls the view's get_news method that displays news 
@@ -15,11 +14,12 @@ class News extends CI_Controller {
         public function index()
         {
                 $data['news'] = $this->news_model->get_news();
-                $data['title'] = 'News archive';
+                $data['title'] = 'BLOGGIE';
 
                 $this->load->view('templates/header', $data);
                 $this->load->view('news/index', $data);
                 $this->load->view('templates/footer');
+
         }
 
         // Loads specific clicked article
@@ -45,7 +45,7 @@ class News extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
         
-            $data['title'] = 'Create a news item';
+            $data['title'] = 'Share your thoughts!';
         
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('text', 'Text', 'required');
@@ -55,14 +55,17 @@ class News extends CI_Controller {
             {
                 $this->load->view('templates/header', $data);
                 $this->load->view('news/create');
-                $this->load->view('templates/footer');
         
             }
             // Load on success at news/success
             else
             {
                 $this->news_model->set_news();
+                $this->load->view('templates/header', $data);
                 $this->load->view('news/success');
+                $this->load->view('news/create');
+                $this->load->view('templates/footer');
+
             }
         }
 }

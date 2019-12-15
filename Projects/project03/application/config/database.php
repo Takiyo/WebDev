@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 //TODO change to 'softdev'
-$active_group = 'default';
+$active_group = 'softdev';
 $query_builder = TRUE;
 
 $db['default'] = array(

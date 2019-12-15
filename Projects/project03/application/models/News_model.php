@@ -29,7 +29,8 @@ class News_model extends CI_Model {
                 $data = array(
                         'title' => $this->input->post('title'),
                         'slug' => $slug,
-                        'text' => $this->input->post('text')
+                        'text' => $this->input->post('text'),
+                        'date' => $this->input->post('date')
                 );
 
                 return $this->db->insert('news', $data);
